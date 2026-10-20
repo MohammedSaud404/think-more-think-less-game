@@ -18,8 +18,8 @@
 body { margin: 0; background: var(--bg); color: var(--ink);
   font: 17px/1.7 system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif; }
 main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
-.langs { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; }
-.langs a { padding: 6px 18px; border-radius: 999px; border: 2px solid var(--accent); color: var(--accent);
+.langs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 20px; }
+.langs a { padding: 5px 14px; border-radius: 999px; border: 2px solid var(--accent); color: var(--accent);
   text-decoration: none; font-weight: 600; }
 .langs a.on { background: var(--accent); color: var(--accent-ink); }
 article { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 8px 22px 22px; }
@@ -36,49 +36,53 @@ th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: start; ver
 </head>
 <body>
 <main>
-<nav class="langs"><a href="#en" id="to-en">English</a><a href="#ar" id="to-ar" lang="ar">العربية</a></nav>
+<nav class="langs"><a href="#en" id="to-en" lang="en">English</a><a href="#ar" id="to-ar" lang="ar">العربية</a><a href="#fr" id="to-fr" lang="fr">Français</a><a href="#zh" id="to-zh" lang="zh">中文</a><a href="#de" id="to-de" lang="de">Deutsch</a><a href="#tr" id="to-tr" lang="tr">Türkçe</a><a href="#hi" id="to-hi" lang="hi">हिन्दी</a><a href="#pt" id="to-pt" lang="pt">Português</a><a href="#ru" id="to-ru" lang="ru">Русский</a><a href="#es" id="to-es" lang="es">Español</a></nav>
 
 <article id="en" lang="en" dir="ltr">
 <h1>Privacy Policy</h1>
-<p class="meta">Think More Think Less (the game) &middot; Think More Think Less team &middot; Last updated: 16 October 2026</p>
+<p class="meta">Think More Think Less (the game) &middot; Think More Think Less team &middot; Last updated: 20 October 2026</p>
 
-<p>This policy explains what information the mobile game Think More Think Less ("the game", "we") uses,
-why, and the choices you have. The game has no accounts: we never ask for your name, e-mail address,
-phone number, contacts, photos or precise location.</p>
+<p>This policy explains what information the mobile game Think More Think Less ("the game", "we") uses on
+Android and iPhone, why, and the choices you have. The game has no accounts: we never ask for your name,
+e-mail address, phone number, contacts, photos or precise location.</p>
 
 <h2>1. Information kept on your phone</h2>
-<p>Your progress (levels solved), coins, hints bought, settings, the levels you downloaded, the number of
-rewarded ads watched today and a record of your purchases (so that each purchase gives its coins only
-once) are saved on your phone only. We cannot see them. They are deleted when you uninstall the game or
-clear its data.</p>
+<p>Your progress (levels solved, stars and best times), your hints, your settings (language, music), the
+levels, screens, languages and music you downloaded, the number of rewarded ads watched today, a record
+of your purchases and a random player ID are saved on your phone only. We cannot see them. They are
+deleted when you uninstall the game or clear its data.</p>
 
 <h2>2. Information collected by services we use</h2>
 <p>The game uses the following services. Each receives some technical information from your device when
 it is used:</p>
 <ul>
 <li><b>Google Analytics for Firebase</b> (game statistics): which screens and levels are played, how long a
-level takes, whether it was won or lost, hints used, coins earned and spent, download results, ads shown,
-purchases started and finished. It also receives a random app-instance ID, the device model, Android
-version, app version, language and an approximate country or region derived from the IP address. We use
-it to improve the levels and the game. It is not used for advertising: the game tells Analytics that
-advertising use is denied.</li>
+level takes, whether it was won or lost, hints used, ads shown, downloads, and purchases started and
+finished. It also receives a random app-instance ID, the device model, the system version (Android or
+iOS), the game's version, its language and an approximate country or region derived from the IP address.
+We use it to improve the levels and the game. It is not used for advertising: the game tells Analytics
+that advertising use is denied.</li>
 <li><b>Firebase Crashlytics</b> (crash reports): when the game crashes, a report with the technical details of
-the crash (stack trace, device model, Android version, app version, the screen it happened on and a
-random installation ID).</li>
-<li><b>Firebase Cloud Messaging</b> (notifications): a random device token so that we can send notifications
-about new levels and puzzles to all players, or to all players of one language. On Android 13 and later
-the game asks your permission first.</li>
-<li><b>Google AdMob</b> (ads): the game shows an ad after some levels and a rewarded ad when you choose to
-watch one for coins or a hint. AdMob may use your device's advertising ID, IP address, device information
-and how you interact with ads, to show ads, measure them and prevent fraud. In the European Economic
-Area, the United Kingdom and Switzerland you are asked for your consent first, through Google's consent
-message; without consent only non-personalised ads are shown. Elsewhere, Google may show ads based on
-your interests unless you turn this off in your phone's settings (see section 5).</li>
-<li><b>Google Play Billing</b> (purchases of coin packs): payments are handled entirely by Google Play. We
-never receive your card or payment details; the game only receives the product bought and a purchase
-token.</li>
-<li><b>GitHub</b> (downloads): new levels, weekly puzzles and game updates are downloaded from GitHub's
-servers. Like any website, GitHub receives your IP address and basic request information.</li>
+the crash (where it happened in the code, the device model, the system version, the game's version, the
+screen it happened on and a random installation ID).</li>
+<li><b>Firebase Cloud Messaging</b> (notifications): a random device token, so that we can send notifications
+to all players, to the players of one language, or to one player ID (for example to tell you that support
+has sent you a gift). On Android 13 and later and on iPhone the game asks your permission first.</li>
+<li><b>Google AdMob</b> (ads): the game shows an ad after some levels, a rewarded ad when you choose to watch
+one (for a hint or to skip a level), and may show a banner at the bottom of a level. AdMob may use your
+device's advertising identifier, IP address, device information and how you interact with ads, to show
+ads, measure them and prevent fraud. On iPhone the advertising identifier is used only if you allow
+tracking when you are asked. In the European Economic Area, the United Kingdom and Switzerland you are
+asked for your consent first, through Google's consent message; without consent only non-personalised ads
+are shown. Elsewhere, Google may show ads based on your interests unless you turn this off in your
+phone's settings (see section 6).</li>
+<li><b>Google Play and the App Store</b> (purchases of hint packs and "Remove ads"): payments are handled
+entirely by Google Play or Apple. We never receive your card or payment details; the game only receives
+the product bought and the purchase's record from the store.</li>
+<li><b>GitHub and Cloudflare</b> (downloads): new levels, special challenges, screens, languages, music,
+the game's rules and support's gifts are downloaded from GitHub's servers, or from our mirror on
+Cloudflare where GitHub cannot be reached. Like any website, they receive your IP address and basic
+request information.</li>
 <li><b>Connection check</b>: only when a download fails, the game contacts google.com and cloudflare.com to
 tell whether you are offline or the server is blocked where you are. Nothing is sent to them except a
 normal web request.</li>
@@ -86,155 +90,1077 @@ normal web request.</li>
 <p>Their own policies: <a href="https://policies.google.com/privacy">Google Privacy Policy</a>,
 <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>,
 <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a>,
-<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
+<a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>,
+<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>,
+<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>.</p>
 
-<h2>3. What we do not do</h2>
+<h2>3. Your player ID and support's gifts</h2>
+<p>The game makes a random player ID (shown in its settings). It is not linked to your name or to who you
+are. If you send it to us, support can give you hints or "Remove ads" as a gift: the gift is published,
+encrypted, in a file the game downloads, together with the player ID it is for, for at most 90 days.</p>
+
+<h2>4. What we do not do</h2>
 <ul>
 <li>We do not sell your information.</li>
 <li>We do not collect your name, e-mail, contacts, photos, microphone or precise location.</li>
 <li>We do not link the information above to who you are.</li>
 </ul>
 
-<h2>4. How long information is kept</h2>
+<h2>5. How long information is kept</h2>
 <table>
 <tr><th>Information</th><th>Kept for</th></tr>
 <tr><td>Game statistics (Analytics)</td><td>14 months</td></tr>
 <tr><td>Crash reports (Crashlytics)</td><td>90 days</td></tr>
 <tr><td>Notification token</td><td>Until it is no longer used (Google removes inactive tokens)</td></tr>
+<tr><td>Support's gifts</td><td>At most 90 days in the published files</td></tr>
 <tr><td>Ads information</td><td>As described in Google's policies</td></tr>
 <tr><td>Information on your phone</td><td>Until you uninstall the game or clear its data</td></tr>
 </table>
 
-<h2>5. Your choices</h2>
+<h2>6. Your choices</h2>
 <ul>
 <li><b>Privacy choices in the game</b>: where the law requires it (Europe, the UK, Switzerland), the game's
 settings have a "Privacy choices" button to change your ads consent at any time.</li>
-<li><b>Advertising ID</b>: in your phone's settings (Google &rarr; Ads, or Privacy &rarr; Ads) you can reset or
-delete your advertising ID and opt out of personalised ads.</li>
+<li><b>Advertising identifier</b>: in your phone's settings you can reset or delete your advertising ID and opt
+out of personalised ads (Android), or stop allowing apps to track you (iPhone).</li>
 <li><b>Notifications</b>: turn them off at any time in your phone's settings for the game.</li>
-<li><b>Statistics</b>: clearing the game's data or uninstalling it gives the game a new random ID, so old
+<li><b>Statistics</b>: clearing the game's data or uninstalling it gives the game new random IDs, so old
 statistics are no longer linked to your device.</li>
 <li><b>Your rights</b>: depending on where you live (for example under the GDPR) you may have the right to
 access, delete or object to the use of information about you, and to complain to your data protection
 authority. Because the game has no accounts, we usually cannot tell which information is yours, but
-write to us and we will help as far as we can.</li>
+write to us (with your player ID if you can) and we will help as far as we can.</li>
 </ul>
 
-<h2>6. Children</h2>
+<h2>7. Children</h2>
 <p>The game is meant for players aged 13 and over and is not directed at children under 13. We do not
 knowingly collect information from children under 13. If you believe a child under 13 has used the
 game and you want information removed, contact us.</p>
 
-<h2>7. Security and transfers</h2>
+<h2>8. Security and transfers</h2>
 <p>Downloads and the services above use encrypted connections (HTTPS). The services' servers may be
-outside your country, including in the United States; Google and GitHub protect such transfers as
-described in their policies.</p>
+outside your country, including in the United States; Google, Apple, GitHub and Cloudflare protect such
+transfers as described in their policies.</p>
 
-<h2>8. Changes</h2>
+<h2>9. Changes</h2>
 <p>If this policy changes, the new version is published on this page with a new date.</p>
 
-<h2>9. Contact</h2>
+<h2>10. Contact</h2>
 <p>Think More Think Less team &middot; <a href="mailto:mohammed.m.saud404@gmail.com">mohammed.m.saud404@gmail.com</a></p>
 </article>
 
 <article id="ar" lang="ar" dir="rtl" hidden>
 <h1>سياسة الخصوصية</h1>
-<p class="meta">لعبة فكّر أكثر فكّر أقل (Think More Think Less) &middot; فريق Think More Think Less &middot; آخر تحديث: 16 أكتوبر 2026</p>
+<p class="meta">لعبة فكّر أكثر فكّر أقل (Think More Think Less) &middot; فريق Think More Think Less &middot; آخر تحديث: 20 أكتوبر 2026</p>
 
-<p>توضّح هذه السياسة ما تستخدمه لعبة الهاتف "فكّر أكثر فكّر أقل" ("اللعبة"، "نحن") من معلومات، ولماذا،
-والخيارات المتاحة لك. لا توجد في اللعبة حسابات: لا نطلب أبدًا اسمك ولا بريدك الإلكتروني ولا رقم هاتفك ولا
+<p>توضّح هذه السياسة ما تستخدمه لعبة الهاتف "فكّر أكثر فكّر أقل" ("اللعبة"، "نحن") من معلومات على Android وiPhone،
+ولماذا، والخيارات المتاحة لك. لا توجد في اللعبة حسابات: لا نطلب أبدًا اسمك ولا بريدك الإلكتروني ولا رقم هاتفك ولا
 جهات اتصالك ولا صورك ولا موقعك الدقيق.</p>
 
 <h2>1. معلومات تُحفظ على هاتفك</h2>
-<p>تقدّمك (المراحل المحلولة)، وعملاتك، والتلميحات التي اشتريتها، وإعداداتك، والمراحل التي نزّلتها، وعدد إعلانات
-المكافأة التي شاهدتها اليوم، وسجلّ مشترياتك (حتى تعطي كل عملية شراء عملاتها مرة واحدة فقط) تُحفظ على هاتفك
-وحده، ولا نستطيع رؤيتها. وتُحذف عند إزالة اللعبة أو مسح بياناتها.</p>
+<p>تقدّمك (المراحل المحلولة والنجوم وأفضل الأوقات)، وتلميحاتك، وإعداداتك (اللغة والموسيقى)، والمراحل والشاشات
+واللغات والموسيقى التي نزّلتها، وعدد إعلانات المكافأة التي شاهدتها اليوم، وسجلّ مشترياتك، ومعرّف لاعب عشوائي، كلّها
+تُحفظ على هاتفك وحده. ولا نستطيع رؤيتها. وتُحذف عند إزالة اللعبة أو مسح بياناتها.</p>
 
 <h2>2. معلومات تجمعها خدمات نستخدمها</h2>
 <p>تستخدم اللعبة الخدمات التالية، وكلّ منها يتلقّى بعض المعلومات التقنية من جهازك عند استخدامها:</p>
 <ul>
 <li><b>Google Analytics for Firebase</b> (إحصاءات اللعبة): الشاشات والمراحل التي تُلعب، والوقت الذي تستغرقه
-المرحلة، والفوز أو الخسارة، والتلميحات المستخدمة، والعملات المكتسبة والمنفقة، ونتائج التنزيل، والإعلانات
-المعروضة، وعمليات الشراء التي بدأت وانتهت. ويتلقّى أيضًا معرّفًا عشوائيًا للتطبيق، وطراز الجهاز، وإصدار
-Android، وإصدار اللعبة، واللغة، وبلدًا أو منطقة تقريبية تُستنتج من عنوان IP. نستخدمه لتحسين المراحل واللعبة،
-ولا يُستخدم للإعلانات: فاللعبة تُبلغه أن استخدام بياناته في الإعلانات مرفوض.</li>
-<li><b>Firebase Crashlytics</b> (تقارير الأعطال): عند توقّف اللعبة بخطأ، يُرسل تقرير بتفاصيله التقنية (موضع الخطأ
-في الشيفرة، وطراز الجهاز، وإصدار Android، وإصدار اللعبة، والشاشة التي حدث فيها، ومعرّف تثبيت عشوائي).</li>
-<li><b>Firebase Cloud Messaging</b> (الإشعارات): رمز عشوائي للجهاز حتى نرسل إشعارات عن المراحل والألغاز الجديدة
-إلى كل اللاعبين، أو إلى لاعبي لغة واحدة. وفي Android 13 وما بعده تطلب اللعبة إذنك أولًا.</li>
-<li><b>Google AdMob</b> (الإعلانات): تعرض اللعبة إعلانًا بعد بعض المراحل، وإعلان مكافأة عندما تختار مشاهدته مقابل
-عملات أو تلميح. قد يستخدم AdMob معرّف الإعلانات في جهازك، وعنوان IP، ومعلومات الجهاز، وتفاعلك مع الإعلانات،
-لعرض الإعلانات وقياسها ومنع الاحتيال. في المنطقة الاقتصادية الأوروبية والمملكة المتحدة وسويسرا تُسأل عن
-موافقتك أولًا عبر رسالة الموافقة من Google، ودون موافقتك تُعرض إعلانات غير مخصّصة فقط. وفي غيرها قد تعرض
-Google إعلانات مبنية على اهتماماتك ما لم توقف ذلك من إعدادات هاتفك (انظر البند 5).</li>
-<li><b>Google Play Billing</b> (شراء حزم العملات): يتولّى Google Play الدفع بالكامل، ولا نتلقّى أبدًا بيانات بطاقتك
-أو دفعك؛ تتلقّى اللعبة فقط اسم المنتج المشترى ورمز عملية الشراء.</li>
-<li><b>GitHub</b> (التنزيلات): تُنزَّل المراحل الجديدة والألغاز الأسبوعية وتحديثات اللعبة من خوادم GitHub، ومثل أي
-موقع إلكتروني يتلقّى GitHub عنوان IP ومعلومات الطلب الأساسية.</li>
+المرحلة، والفوز أو الخسارة، والتلميحات المستخدمة، والإعلانات المعروضة، والتنزيلات، وعمليات الشراء التي بدأت
+وانتهت. ويتلقّى أيضًا معرّفًا عشوائيًا لنسخة التطبيق، وطراز الجهاز، وإصدار النظام (Android أو iOS)، وإصدار اللعبة،
+ولغتها، وبلدًا أو منطقة تقريبية تُستنتج من عنوان IP. نستخدمه لتحسين المراحل واللعبة. ولا يُستخدم للإعلانات: فاللعبة
+تُبلغ Analytics أن استخدام بياناته في الإعلانات مرفوض.</li>
+<li><b>Firebase Crashlytics</b> (تقارير الأعطال): عند توقّف اللعبة بخطأ، يُرسل تقرير بالتفاصيل التقنية للعطل (موضع
+حدوثه في الشيفرة، وطراز الجهاز، وإصدار النظام، وإصدار اللعبة، والشاشة التي حدث فيها، ومعرّف تثبيت عشوائي).</li>
+<li><b>Firebase Cloud Messaging</b> (الإشعارات): رمز عشوائي للجهاز حتى نرسل إشعارات إلى كل اللاعبين، أو إلى لاعبي
+لغة واحدة، أو إلى معرّف لاعب واحد (مثلًا لنخبرك أن الدعم أرسل إليك هدية). وفي Android 13 وما بعده وفي iPhone
+تطلب اللعبة إذنك أولًا.</li>
+<li><b>Google AdMob</b> (الإعلانات): تعرض اللعبة إعلانًا بعد بعض المراحل، وإعلان مكافأة عندما تختار مشاهدته (مقابل
+تلميح أو لتخطّي مرحلة)، وقد تعرض شريطًا إعلانيًا أسفل المرحلة. قد يستخدم AdMob معرّف الإعلانات في جهازك، وعنوان IP،
+ومعلومات الجهاز، وتفاعلك مع الإعلانات، لعرض الإعلانات وقياسها ومنع الاحتيال. وفي iPhone لا يُستخدم معرّف الإعلانات
+إلا إذا سمحت بالتتبّع عندما تُسأل عن ذلك. في المنطقة الاقتصادية الأوروبية والمملكة المتحدة وسويسرا تُسأل عن موافقتك
+أولًا عبر رسالة الموافقة من Google، ودون موافقتك تُعرض إعلانات غير مخصّصة فقط. وفي غيرها قد تعرض Google إعلانات
+مبنية على اهتماماتك ما لم توقف ذلك من إعدادات هاتفك (انظر البند 6).</li>
+<li><b>Google Play وApp Store</b> (شراء حزم التلميحات و"إزالة الإعلانات"): يتولّى Google Play أو Apple الدفع
+بالكامل، ولا نتلقّى أبدًا بيانات بطاقتك أو دفعك؛ تتلقّى اللعبة من المتجر فقط المنتج المشترى وسجلّ عملية الشراء.</li>
+<li><b>GitHub وCloudflare</b> (التنزيلات): تُنزَّل المراحل الجديدة والتحديات الخاصة والشاشات واللغات والموسيقى
+وقواعد اللعبة وهدايا الدعم من خوادم GitHub، أو من خادمنا البديل على Cloudflare حيث يتعذّر الوصول إلى GitHub. ومثل
+أي موقع إلكتروني، يتلقّيان عنوان IP الخاص بك ومعلومات الطلب الأساسية.</li>
 <li><b>فحص الاتصال</b>: عند فشل تنزيل فقط، تتصل اللعبة بموقعَي google.com وcloudflare.com لتعرف هل أنت دون إنترنت
 أم أن الخادم محجوب في بلدك. ولا يُرسل إليهما شيء سوى طلب ويب عادي.</li>
 </ul>
 <p>سياساتها الخاصة: <a href="https://policies.google.com/privacy?hl=ar">سياسة خصوصية Google</a>،
 <a href="https://firebase.google.com/support/privacy">الخصوصية والأمان في Firebase</a>،
 <a href="https://policies.google.com/technologies/partner-sites?hl=ar">كيف تستخدم Google المعلومات من التطبيقات التي تستخدم خدماتها</a>،
-<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">بيان الخصوصية العام في GitHub</a>.</p>
+<a href="https://www.apple.com/legal/privacy/">سياسة خصوصية Apple</a>،
+<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">بيان الخصوصية العام في GitHub</a>،
+<a href="https://www.cloudflare.com/privacypolicy/">سياسة خصوصية Cloudflare</a>.</p>
 
-<h2>3. ما لا نفعله</h2>
+<h2>3. معرّف اللاعب الخاص بك وهدايا الدعم</h2>
+<p>تُنشئ اللعبة معرّف لاعب عشوائيًا (يظهر في إعداداتها). ولا يرتبط باسمك ولا بشخصك. إذا أرسلته إلينا، يستطيع الدعم
+أن يمنحك تلميحات أو "إزالة الإعلانات" هديةً: تُنشر الهدية مشفّرةً في ملف تنزّله اللعبة، مع معرّف اللاعب الذي هي له،
+مدةً أقصاها 90 يومًا.</p>
+
+<h2>4. ما لا نفعله</h2>
 <ul>
 <li>لا نبيع معلوماتك.</li>
 <li>لا نجمع اسمك ولا بريدك ولا جهات اتصالك ولا صورك ولا الميكروفون ولا موقعك الدقيق.</li>
 <li>لا نربط المعلومات المذكورة أعلاه بشخصك.</li>
 </ul>
 
-<h2>4. مدة الاحتفاظ بالمعلومات</h2>
+<h2>5. مدة الاحتفاظ بالمعلومات</h2>
 <table>
 <tr><th>المعلومات</th><th>مدة الاحتفاظ</th></tr>
 <tr><td>إحصاءات اللعبة (Analytics)</td><td>14 شهرًا</td></tr>
 <tr><td>تقارير الأعطال (Crashlytics)</td><td>90 يومًا</td></tr>
 <tr><td>رمز الإشعارات</td><td>حتى يتوقّف استخدامه (تحذف Google الرموز غير النشطة)</td></tr>
+<tr><td>هدايا الدعم</td><td>90 يومًا على الأكثر في الملفات المنشورة</td></tr>
 <tr><td>معلومات الإعلانات</td><td>كما تصفها سياسات Google</td></tr>
 <tr><td>المعلومات على هاتفك</td><td>حتى تزيل اللعبة أو تمسح بياناتها</td></tr>
 </table>
 
-<h2>5. خياراتك</h2>
+<h2>6. خياراتك</h2>
 <ul>
 <li><b>خيارات الخصوصية في اللعبة</b>: حيث يطلب القانون ذلك (أوروبا والمملكة المتحدة وسويسرا) تجد في إعدادات
 اللعبة زر "خيارات الخصوصية" لتغيير موافقتك على الإعلانات في أي وقت.</li>
-<li><b>معرّف الإعلانات</b>: من إعدادات هاتفك (Google ثم الإعلانات، أو الخصوصية ثم الإعلانات) يمكنك إعادة ضبط
-معرّف الإعلانات أو حذفه، وإيقاف الإعلانات المخصّصة.</li>
+<li><b>معرّف الإعلانات</b>: من إعدادات هاتفك يمكنك إعادة ضبط معرّف الإعلانات أو حذفه وإيقاف الإعلانات المخصّصة
+(Android)، أو التوقّف عن السماح للتطبيقات بتتبّعك (iPhone).</li>
 <li><b>الإشعارات</b>: أوقفها متى شئت من إعدادات هاتفك الخاصة باللعبة.</li>
-<li><b>الإحصاءات</b>: مسح بيانات اللعبة أو إزالتها يعطي اللعبة معرّفًا عشوائيًا جديدًا، فلا تعود الإحصاءات القديمة
+<li><b>الإحصاءات</b>: مسح بيانات اللعبة أو إزالتها يعطي اللعبة معرّفات عشوائية جديدة، فلا تعود الإحصاءات القديمة
 مرتبطة بجهازك.</li>
-<li><b>حقوقك</b>: بحسب مكان إقامتك (مثل اللائحة الأوروبية GDPR) قد يحق لك الاطلاع على المعلومات المتعلقة بك أو
-حذفها أو الاعتراض على استخدامها، والشكوى إلى هيئة حماية البيانات. ولأن اللعبة بلا حسابات فنحن في الغالب لا
-نستطيع معرفة أي المعلومات تخصّك، لكن راسلنا وسنساعدك قدر استطاعتنا.</li>
+<li><b>حقوقك</b>: بحسب مكان إقامتك (مثلًا بموجب اللائحة الأوروبية GDPR) قد يحق لك الاطلاع على المعلومات المتعلقة
+بك أو حذفها أو الاعتراض على استخدامها، والشكوى إلى هيئة حماية البيانات المختصّة. ولأن اللعبة بلا حسابات فنحن في
+الغالب لا نستطيع معرفة أي المعلومات تخصّك، لكن راسلنا (مع معرّف اللاعب الخاص بك إن أمكن) وسنساعدك قدر استطاعتنا.</li>
 </ul>
 
-<h2>6. الأطفال</h2>
-<p>اللعبة موجّهة لمن هم في الثالثة عشرة فما فوق، وليست موجّهة للأطفال دون الثالثة عشرة، ولا نجمع عن علمٍ
-معلومات عنهم. إن كنت تعتقد أن طفلًا دون الثالثة عشرة استخدم اللعبة وتريد إزالة معلومات، فراسلنا.</p>
+<h2>7. الأطفال</h2>
+<p>اللعبة موجّهة للاعبين في الثالثة عشرة فما فوق، وليست موجّهة للأطفال دون الثالثة عشرة. ولا نجمع عن علمٍ معلومات
+من الأطفال دون الثالثة عشرة. إن كنت تعتقد أن طفلًا دون الثالثة عشرة استخدم اللعبة وتريد إزالة معلومات، فراسلنا.</p>
 
-<h2>7. الأمان ونقل المعلومات</h2>
-<p>تستخدم التنزيلات والخدمات المذكورة اتصالات مشفّرة (HTTPS). وقد تكون خوادم هذه الخدمات خارج بلدك، ومنها
-الولايات المتحدة، وتحمي Google وGitHub هذا النقل كما تصف سياساتهما.</p>
+<h2>8. الأمان ونقل المعلومات</h2>
+<p>تستخدم التنزيلات والخدمات المذكورة أعلاه اتصالات مشفّرة (HTTPS). وقد تكون خوادم هذه الخدمات خارج بلدك، بما في
+ذلك الولايات المتحدة؛ وتحمي Google وApple وGitHub وCloudflare هذا النقل كما تصف سياساتها.</p>
 
-<h2>8. التغييرات</h2>
+<h2>9. التغييرات</h2>
 <p>إذا تغيّرت هذه السياسة تُنشر النسخة الجديدة في هذه الصفحة بتاريخ جديد.</p>
 
-<h2>9. التواصل</h2>
+<h2>10. التواصل</h2>
 <p>فريق Think More Think Less &middot; <a href="mailto:mohammed.m.saud404@gmail.com">mohammed.m.saud404@gmail.com</a></p>
+</article>
+
+<article id="fr" lang="fr" dir="ltr" hidden>
+<h1>Politique de confidentialité</h1>
+<p class="meta">Pense plus, pense moins (Think More Think Less, le jeu) &middot; L'équipe Think More Think Less &middot; Dernière mise à jour&nbsp;: 20 octobre 2026</p>
+
+<p>Cette politique explique quelles informations le jeu mobile Pense plus, pense moins («&nbsp;le jeu&nbsp;», «&nbsp;nous&nbsp;») utilise
+sur Android et iPhone, pourquoi, et les choix dont tu disposes. Le jeu n'a pas de comptes&nbsp;: nous ne te demandons
+jamais ton nom, ton adresse e-mail, ton numéro de téléphone, tes contacts, tes photos ni ta position précise.</p>
+
+<h2>1. Informations conservées sur ton téléphone</h2>
+<p>Ta progression (niveaux résolus, étoiles et meilleurs temps), tes indices, tes réglages (langue, musique), les
+niveaux, écrans, langues et musiques que tu as téléchargés, le nombre de publicités avec récompense regardées
+aujourd'hui, un historique de tes achats et un ID du joueur aléatoire sont enregistrés uniquement sur ton téléphone.
+Nous ne pouvons pas les voir. Ils sont supprimés lorsque tu désinstalles le jeu ou effaces ses données.</p>
+
+<h2>2. Informations collectées par les services que nous utilisons</h2>
+<p>Le jeu utilise les services suivants. Chacun reçoit certaines informations techniques de ton appareil lorsqu'il
+est utilisé&nbsp;:</p>
+<ul>
+<li><b>Google Analytics for Firebase</b> (statistiques du jeu)&nbsp;: quels écrans et niveaux sont joués, combien de
+temps prend un niveau, s'il a été gagné ou perdu, les indices utilisés, les publicités affichées, les téléchargements,
+et les achats commencés et terminés. Il reçoit aussi un ID d'instance d'application aléatoire, le modèle de
+l'appareil, la version du système (Android ou iOS), la version du jeu, sa langue et un pays ou une région
+approximatifs, déduits de l'adresse IP. Nous l'utilisons pour améliorer les niveaux et le jeu. Il n'est pas utilisé
+à des fins publicitaires&nbsp;: le jeu indique à Analytics que l'utilisation à des fins publicitaires est refusée.</li>
+<li><b>Firebase Crashlytics</b> (rapports de plantage)&nbsp;: lorsque le jeu plante, un rapport contenant les détails
+techniques du plantage (l'endroit du code où il s'est produit, le modèle de l'appareil, la version du système, la
+version du jeu, l'écran sur lequel il s'est produit et un ID d'installation aléatoire).</li>
+<li><b>Firebase Cloud Messaging</b> (notifications)&nbsp;: un jeton d'appareil aléatoire, afin que nous puissions
+envoyer des notifications à tous les joueurs, aux joueurs d'une langue, ou à un seul ID du joueur (par exemple pour
+te dire que l'assistance t'a envoyé un cadeau). Sur Android 13 et versions ultérieures, et sur iPhone, le jeu te
+demande d'abord ton autorisation.</li>
+<li><b>Google AdMob</b> (publicités)&nbsp;: le jeu affiche une publicité après certains niveaux, une publicité avec
+récompense quand tu choisis d'en regarder une (pour un indice ou pour passer un niveau), et peut afficher une
+bannière en bas d'un niveau. AdMob peut utiliser l'identifiant publicitaire de ton appareil, ton adresse IP, des
+informations sur l'appareil et la façon dont tu interagis avec les publicités, afin d'afficher des publicités, de
+les mesurer et de prévenir la fraude. Sur iPhone, l'identifiant publicitaire n'est utilisé que si tu autorises le
+suivi lorsque cela t'est demandé. Dans l'Espace économique européen, au Royaume-Uni et en Suisse, ton consentement
+t'est d'abord demandé, au moyen du message de consentement de Google&nbsp;; sans consentement, seules des publicités
+non personnalisées sont affichées. Ailleurs, Google peut afficher des publicités basées sur tes centres d'intérêt,
+sauf si tu désactives cette option dans les paramètres de ton téléphone (voir la section 6).</li>
+<li><b>Google Play et l'App Store</b> (achats de packs d'indices et de «&nbsp;Supprimer les pubs&nbsp;»)&nbsp;: les
+paiements sont entièrement gérés par Google Play ou Apple. Nous ne recevons jamais les données de ta carte ni tes
+informations de paiement&nbsp;; le jeu reçoit seulement, de la part de la boutique, le produit acheté et
+l'enregistrement de l'achat.</li>
+<li><b>GitHub et Cloudflare</b> (téléchargements)&nbsp;: les nouveaux niveaux, les défis spéciaux, les écrans, les
+langues, la musique, les règles du jeu et les cadeaux de l'assistance sont téléchargés depuis les serveurs de
+GitHub, ou depuis notre serveur miroir sur Cloudflare là où GitHub est inaccessible. Comme n'importe quel site web,
+ils reçoivent ton adresse IP et des informations de base sur la requête.</li>
+<li><b>Vérification de la connexion</b>&nbsp;: uniquement lorsqu'un téléchargement échoue, le jeu contacte google.com
+et cloudflare.com pour savoir si tu es hors ligne ou si le serveur est bloqué là où tu te trouves. Rien ne leur est
+envoyé à part une requête web normale.</li>
+</ul>
+<p>Leurs propres politiques&nbsp;: <a href="https://policies.google.com/privacy?hl=fr">Règles de confidentialité de Google</a>,
+<a href="https://firebase.google.com/support/privacy">Confidentialité et sécurité dans Firebase</a>,
+<a href="https://policies.google.com/technologies/partner-sites?hl=fr">Comment Google utilise les informations des applications qui utilisent ses services</a>,
+<a href="https://www.apple.com/legal/privacy/">Politique de confidentialité d'Apple</a>,
+<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">Déclaration générale de confidentialité de GitHub</a>,
+<a href="https://www.cloudflare.com/privacypolicy/">Politique de confidentialité de Cloudflare</a>.</p>
+
+<h2>3. Ton ID du joueur et les cadeaux de l'assistance</h2>
+<p>Le jeu crée un ID du joueur aléatoire (affiché dans ses réglages). Il n'est lié ni à ton nom ni à ton identité.
+Si tu nous l'envoies, l'assistance peut t'offrir des indices ou «&nbsp;Supprimer les pubs&nbsp;» en cadeau&nbsp;: le
+cadeau est publié, chiffré, dans un fichier que le jeu télécharge, avec l'ID du joueur auquel il est destiné, pendant
+90 jours au maximum.</p>
+
+<h2>4. Ce que nous ne faisons pas</h2>
+<ul>
+<li>Nous ne vendons pas tes informations.</li>
+<li>Nous ne collectons pas ton nom, ton e-mail, tes contacts, tes photos, ton microphone ni ta position précise.</li>
+<li>Nous ne relions pas les informations ci-dessus à ton identité.</li>
+</ul>
+
+<h2>5. Durée de conservation des informations</h2>
+<table>
+<tr><th>Information</th><th>Durée de conservation</th></tr>
+<tr><td>Statistiques du jeu (Analytics)</td><td>14 mois</td></tr>
+<tr><td>Rapports de plantage (Crashlytics)</td><td>90 jours</td></tr>
+<tr><td>Jeton de notification</td><td>Jusqu'à ce qu'il ne soit plus utilisé (Google supprime les jetons inactifs)</td></tr>
+<tr><td>Cadeaux de l'assistance</td><td>90 jours au maximum dans les fichiers publiés</td></tr>
+<tr><td>Informations publicitaires</td><td>Comme décrit dans les règles de Google</td></tr>
+<tr><td>Informations sur ton téléphone</td><td>Jusqu'à ce que tu désinstalles le jeu ou effaces ses données</td></tr>
+</table>
+
+<h2>6. Tes choix</h2>
+<ul>
+<li><b>Choix de confidentialité dans le jeu</b>&nbsp;: là où la loi l'exige (Europe, Royaume-Uni, Suisse), les
+réglages du jeu comportent un bouton «&nbsp;Choix de confidentialité&nbsp;» pour modifier à tout moment ton
+consentement aux publicités.</li>
+<li><b>Identifiant publicitaire</b>&nbsp;: dans les paramètres de ton téléphone, tu peux réinitialiser ou supprimer
+ton identifiant publicitaire et refuser les publicités personnalisées (Android), ou ne plus autoriser les
+applications à te suivre (iPhone).</li>
+<li><b>Notifications</b>&nbsp;: désactive à tout moment les notifications du jeu dans les paramètres de ton
+téléphone.</li>
+<li><b>Statistiques</b>&nbsp;: effacer les données du jeu ou le désinstaller donne au jeu de nouveaux ID aléatoires,
+si bien que les anciennes statistiques ne sont plus liées à ton appareil.</li>
+<li><b>Tes droits</b>&nbsp;: selon l'endroit où tu vis (par exemple en vertu du RGPD), tu peux avoir le droit
+d'accéder aux informations te concernant, de les supprimer ou de t'opposer à leur utilisation, et d'introduire une
+réclamation auprès de ton autorité de protection des données. Comme le jeu n'a pas de comptes, nous ne pouvons
+généralement pas savoir quelles informations sont les tiennes, mais écris-nous (avec ton ID du joueur si tu le
+peux) et nous t'aiderons dans la mesure du possible.</li>
+</ul>
+
+<h2>7. Enfants</h2>
+<p>Le jeu est destiné aux joueurs de 13 ans et plus et ne s'adresse pas aux enfants de moins de 13 ans. Nous ne
+collectons pas sciemment d'informations auprès d'enfants de moins de 13 ans. Si tu penses qu'un enfant de moins de
+13 ans a utilisé le jeu et que tu souhaites que des informations soient supprimées, contacte-nous.</p>
+
+<h2>8. Sécurité et transferts</h2>
+<p>Les téléchargements et les services ci-dessus utilisent des connexions chiffrées (HTTPS). Les serveurs de ces
+services peuvent se trouver hors de ton pays, notamment aux États-Unis&nbsp;; Google, Apple, GitHub et Cloudflare
+protègent ces transferts comme décrit dans leurs politiques.</p>
+
+<h2>9. Modifications</h2>
+<p>Si cette politique change, la nouvelle version est publiée sur cette page avec une nouvelle date.</p>
+
+<h2>10. Contact</h2>
+<p>L'équipe Think More Think Less &middot; <a href="mailto:mohammed.m.saud404@gmail.com">mohammed.m.saud404@gmail.com</a></p>
+</article>
+
+<article id="zh" lang="zh" dir="ltr" hidden>
+<h1>隐私政策</h1>
+<p class="meta">游戏《多想一点，少想一点》（Think More Think Less）&middot; Think More Think Less 团队 &middot; 最后更新：2026年10月20日</p>
+
+<p>本政策说明手机游戏《多想一点，少想一点》（以下称“本游戏”或“我们”）在 Android 和 iPhone 上使用哪些信息、为什么使用，
+以及你有哪些选择。本游戏没有账号：我们从不索取你的姓名、电子邮箱地址、电话号码、通讯录、照片或精确位置。</p>
+
+<h2>1. 保存在你手机上的信息</h2>
+<p>你的进度（已通过的关卡、星星和最佳时间）、你的提示、你的设置（语言、音乐）、你下载的关卡、界面、语言和音乐、
+今天已观看的激励广告数量、你的购买记录以及一个随机的玩家ID，都只保存在你的手机上。我们看不到它们。
+当你卸载本游戏或清除它的数据时，它们会被删除。</p>
+
+<h2>2. 我们使用的服务所收集的信息</h2>
+<p>本游戏使用以下服务。每项服务在被使用时，都会从你的设备收到一些技术信息：</p>
+<ul>
+<li><b>Google Analytics for Firebase</b>（游戏统计）：打开了哪些界面、玩了哪些关卡，一个关卡用了多长时间，是赢还是输，
+使用了哪些提示，展示了哪些广告，下载情况，以及开始和完成的购买。它还会收到一个随机的应用实例 ID、设备型号、
+系统版本（Android 或 iOS）、本游戏的版本、本游戏的语言，以及根据 IP 地址推断出的大致国家或地区。
+我们用它来改进关卡和游戏。它不用于广告：本游戏会告知 Analytics 不允许将其用于广告。</li>
+<li><b>Firebase Crashlytics</b>（崩溃报告）：本游戏崩溃时，它会收到一份包含崩溃技术细节的报告（崩溃发生在代码中的哪个位置、
+设备型号、系统版本、本游戏的版本、崩溃时所在的界面，以及一个随机的安装 ID）。</li>
+<li><b>Firebase Cloud Messaging</b>（通知）：一个随机的设备令牌，以便我们向所有玩家、使用某一种语言的玩家或某一个玩家ID发送通知
+（例如告诉你客服给你送了一份礼物）。在 Android 13 及更高版本以及 iPhone 上，本游戏会先征求你的许可。</li>
+<li><b>Google AdMob</b>（广告）：本游戏会在某些关卡结束后展示一则广告；当你选择观看时展示一则激励广告（为了获得提示或跳过一个关卡）；
+还可能在关卡底部展示横幅广告。AdMob 可能会使用你设备的广告标识符、IP 地址、设备信息以及你与广告的互动情况，
+用于展示广告、衡量广告效果和防止欺诈。在 iPhone 上，只有当你在被询问时允许跟踪，才会使用广告标识符。
+在欧洲经济区、英国和瑞士，会先通过 Google 的意见征求消息征求你的同意；未经同意，只会展示非个性化广告。
+在其他地区，Google 可能会根据你的兴趣展示广告，除非你在手机设置中关闭此功能（见第 6 节）。</li>
+<li><b>Google Play 和 App Store</b>（购买提示包和“去除广告”）：付款完全由 Google Play 或 Apple 处理。
+我们从不会收到你的银行卡或付款信息；本游戏只会从商店收到所购买的商品和该笔购买的记录。</li>
+<li><b>GitHub 和 Cloudflare</b>（下载）：新关卡、特别挑战、界面、语言、音乐、游戏规则以及客服送出的礼物，
+都从 GitHub 的服务器下载；在无法访问 GitHub 的地方，则从我们在 Cloudflare 上的镜像下载。
+与任何网站一样，它们会收到你的 IP 地址和基本的请求信息。</li>
+<li><b>连接检查</b>：仅在下载失败时，本游戏才会访问 google.com 和 cloudflare.com，以判断是你处于离线状态，
+还是服务器在你所在的地方被屏蔽。除了一次普通的网页请求之外，不会向它们发送任何内容。</li>
+</ul>
+<p>它们各自的政策：<a href="https://policies.google.com/privacy?hl=zh-CN">Google 隐私权政策</a>、
+<a href="https://firebase.google.com/support/privacy">Firebase 中的隐私和安全</a>、
+<a href="https://policies.google.com/technologies/partner-sites?hl=zh-CN">Google 如何使用来自采用其服务的应用的信息</a>、
+<a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>、
+<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub 通用隐私声明</a>、
+<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隐私政策</a>。</p>
+
+<h2>3. 你的玩家ID和客服礼物</h2>
+<p>本游戏会生成一个随机的玩家ID（显示在游戏的设置中）。它与你的姓名或你的身份没有关联。
+如果你把它发给我们，客服可以把提示或“去除广告”作为礼物送给你：礼物会经过加密，与它所对应的玩家ID一起，
+发布在本游戏会下载的一个文件中，发布时间最长 90 天。</p>
+
+<h2>4. 我们不做的事</h2>
+<ul>
+<li>我们不出售你的信息。</li>
+<li>我们不收集你的姓名、电子邮箱、通讯录、照片、麦克风或精确位置。</li>
+<li>我们不会将上述信息与你的身份关联起来。</li>
+</ul>
+
+<h2>5. 信息的保存期限</h2>
+<table>
+<tr><th>信息</th><th>保存期限</th></tr>
+<tr><td>游戏统计（Analytics）</td><td>14 个月</td></tr>
+<tr><td>崩溃报告（Crashlytics）</td><td>90 天</td></tr>
+<tr><td>通知令牌</td><td>直到不再使用为止（Google 会删除不活跃的令牌）</td></tr>
+<tr><td>客服礼物</td><td>在已发布的文件中最长 90 天</td></tr>
+<tr><td>广告信息</td><td>按 Google 政策中的说明</td></tr>
+<tr><td>你手机上的信息</td><td>直到你卸载本游戏或清除它的数据为止</td></tr>
+</table>
+
+<h2>6. 你的选择</h2>
+<ul>
+<li><b>游戏内的隐私选项</b>：在法律有要求的地区（欧洲、英国、瑞士），游戏的设置中有一个“隐私选项”按钮，
+你可以随时用它更改你对广告的同意设置。</li>
+<li><b>广告标识符</b>：你可以在手机设置中重置或删除你的广告 ID 并选择停用个性化广告（Android），
+或者不再允许应用跟踪你（iPhone）。</li>
+<li><b>通知</b>：你可以随时在手机设置中为本游戏关闭通知。</li>
+<li><b>统计</b>：清除本游戏的数据或卸载本游戏后，本游戏会获得新的随机 ID，因此旧的统计数据将不再与你的设备关联。</li>
+<li><b>你的权利</b>：根据你所在的地区（例如依据 GDPR），你可能有权访问、删除与你有关的信息或反对使用这些信息，
+并有权向你所在地的数据保护机构投诉。由于本游戏没有账号，我们通常无法分辨哪些信息属于你，
+但请写信给我们（如果可以，请附上你的玩家ID），我们会尽力帮助你。</li>
+</ul>
+
+<h2>7. 儿童</h2>
+<p>本游戏面向 13 岁及以上的玩家，并非针对 13 岁以下的儿童。我们不会在知情的情况下收集 13 岁以下儿童的信息。
+如果你认为有 13 岁以下的儿童使用过本游戏，并且你希望删除相关信息，请联系我们。</p>
+
+<h2>8. 安全与跨境传输</h2>
+<p>下载和上述服务均使用加密连接（HTTPS）。这些服务的服务器可能位于你所在的国家之外，包括美国；
+Google、Apple、GitHub 和 Cloudflare 会按照其政策中的说明保护此类传输。</p>
+
+<h2>9. 变更</h2>
+<p>如果本政策有变更，新版本将在本页面发布，并注明新的日期。</p>
+
+<h2>10. 联系方式</h2>
+<p>Think More Think Less 团队 &middot; <a href="mailto:mohammed.m.saud404@gmail.com">mohammed.m.saud404@gmail.com</a></p>
+</article>
+
+<article id="de" lang="de" dir="ltr" hidden>
+<h1>Datenschutzerklärung</h1>
+<p class="meta">Spiel Denk mehr, denk weniger (Think More Think Less) &middot; Team von Think More Think Less &middot; Zuletzt aktualisiert: 20. Oktober 2026</p>
+
+<p>Diese Erklärung beschreibt, welche Informationen das Handyspiel Denk mehr, denk weniger („das Spiel“, „wir“)
+auf Android und iPhone verwendet, warum, und welche Wahlmöglichkeiten du hast. Das Spiel hat keine Konten: Wir
+fragen nie nach deinem Namen, deiner E-Mail-Adresse, Telefonnummer, deinen Kontakten, Fotos oder deinem genauen
+Standort.</p>
+
+<h2>1. Informationen, die auf deinem Handy gespeichert sind</h2>
+<p>Dein Fortschritt (gelöste Levels, Sterne und Bestzeiten), deine Tipps, deine Einstellungen (Sprache, Musik),
+die Levels, Bildschirme, Sprachen und Musik, die du heruntergeladen hast, die Zahl der heute angesehenen
+Werbeclips mit Belohnung, eine Aufzeichnung deiner Käufe und eine zufällige Spieler-ID werden nur auf deinem
+Handy gespeichert. Wir können sie nicht sehen. Sie werden gelöscht, wenn du das Spiel deinstallierst oder seine
+Daten löschst.</p>
+
+<h2>2. Informationen, die von den Diensten erfasst werden, die wir nutzen</h2>
+<p>Das Spiel nutzt die folgenden Dienste. Jeder davon erhält bei seiner Nutzung einige technische Informationen
+von deinem Gerät:</p>
+<ul>
+<li><b>Google Analytics for Firebase</b> (Spielstatistik): welche Bildschirme und Levels gespielt werden, wie
+lange ein Level dauert, ob es gewonnen oder verloren wurde, verwendete Tipps, gezeigte Werbung, Downloads sowie
+begonnene und abgeschlossene Käufe. Außerdem erhält es eine zufällige App-Instanz-ID, das Gerätemodell, die
+Systemversion (Android oder iOS), die Version des Spiels, seine Sprache und ein ungefähres Land oder eine
+ungefähre Region, abgeleitet aus der IP-Adresse. Wir nutzen es, um die Levels und das Spiel zu verbessern. Es
+wird nicht für Werbung genutzt: Das Spiel teilt Analytics mit, dass die Nutzung für Werbung abgelehnt ist.</li>
+<li><b>Firebase Crashlytics</b> (Absturzberichte): wenn das Spiel abstürzt, ein Bericht mit den technischen
+Details des Absturzes (wo im Code er passiert ist, das Gerätemodell, die Systemversion, die Version des Spiels,
+der Bildschirm, auf dem er passiert ist, und eine zufällige Installations-ID).</li>
+<li><b>Firebase Cloud Messaging</b> (Benachrichtigungen): ein zufälliges Geräte-Token, damit wir
+Benachrichtigungen an alle Spieler, an die Spieler einer Sprache oder an eine Spieler-ID senden können (zum
+Beispiel, um dir mitzuteilen, dass der Support dir ein Geschenk geschickt hat). Ab Android 13 und auf dem iPhone
+fragt das Spiel zuerst nach deiner Erlaubnis.</li>
+<li><b>Google AdMob</b> (Werbung): Das Spiel zeigt nach manchen Levels eine Werbung, einen Werbeclip mit
+Belohnung, wenn du dich entscheidest, einen anzusehen (für einen Tipp oder um ein Level zu überspringen), und
+kann unten in einem Level ein Banner zeigen. AdMob kann die Werbekennung deines Geräts, die IP-Adresse,
+Geräteinformationen und die Art, wie du mit Werbung interagierst, nutzen, um Werbung anzuzeigen, sie zu messen
+und Betrug zu verhindern. Auf dem iPhone wird die Werbekennung nur verwendet, wenn du das Tracking erlaubst,
+sobald du danach gefragt wirst. Im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz
+wirst du zuerst über die Einwilligungsmeldung von Google um deine Einwilligung gebeten; ohne Einwilligung wird
+nur nicht personalisierte Werbung gezeigt. Anderswo kann Google Werbung auf Grundlage deiner Interessen zeigen,
+sofern du das nicht in den Einstellungen deines Handys ausschaltest (siehe Abschnitt 6).</li>
+<li><b>Google Play und der App Store</b> (Käufe von Tipp-Paketen und „Werbung entfernen“): Zahlungen werden
+vollständig von Google Play oder Apple abgewickelt. Wir erhalten nie deine Karten- oder Zahlungsdaten; das
+Spiel erhält vom Store nur das gekaufte Produkt und den Kaufbeleg.</li>
+<li><b>GitHub und Cloudflare</b> (Downloads): Neue Levels, Spezial-Challenges, Bildschirme, Sprachen, Musik,
+die Regeln des Spiels und die Geschenke des Supports werden von den Servern von GitHub heruntergeladen oder, wo
+GitHub nicht erreichbar ist, von unserem Spiegelserver bei Cloudflare. Wie jede Website erhalten sie deine
+IP-Adresse und grundlegende Informationen zur Anfrage.</li>
+<li><b>Verbindungsprüfung</b>: Nur wenn ein Download fehlschlägt, kontaktiert das Spiel google.com und
+cloudflare.com, um festzustellen, ob du offline bist oder der Server bei dir gesperrt ist. An sie wird nichts
+gesendet außer einer normalen Web-Anfrage.</li>
+</ul>
+<p>Die Richtlinien dieser Dienste: <a href="https://policies.google.com/privacy?hl=de">Datenschutzerklärung von Google</a>,
+<a href="https://firebase.google.com/support/privacy">Datenschutz und Sicherheit in Firebase</a>,
+<a href="https://policies.google.com/technologies/partner-sites?hl=de">Wie Google Informationen aus Apps verwendet, die Google-Dienste nutzen</a>,
+<a href="https://www.apple.com/legal/privacy/">Datenschutzrichtlinie von Apple</a>,
+<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">Allgemeine Datenschutzerklärung von GitHub</a>,
+<a href="https://www.cloudflare.com/privacypolicy/">Datenschutzrichtlinie von Cloudflare</a>.</p>
+
+<h2>3. Deine Spieler-ID und die Geschenke des Supports</h2>
+<p>Das Spiel erstellt eine zufällige Spieler-ID (in den Optionen des Spiels angezeigt). Sie ist nicht mit deinem
+Namen oder deiner Person verknüpft. Wenn du sie uns schickst, kann dir der Support Tipps oder „Werbung
+entfernen“ schenken: Das Geschenk wird verschlüsselt in einer Datei, die das Spiel herunterlädt, zusammen mit
+der Spieler-ID, für die es bestimmt ist, höchstens 90 Tage lang veröffentlicht.</p>
+
+<h2>4. Was wir nicht tun</h2>
+<ul>
+<li>Wir verkaufen deine Informationen nicht.</li>
+<li>Wir erfassen nicht deinen Namen, deine E-Mail-Adresse, Kontakte, Fotos, dein Mikrofon oder deinen genauen
+Standort.</li>
+<li>Wir verknüpfen die oben genannten Informationen nicht mit deiner Person.</li>
+</ul>
+
+<h2>5. Wie lange Informationen gespeichert werden</h2>
+<table>
+<tr><th>Information</th><th>Speicherdauer</th></tr>
+<tr><td>Spielstatistik (Analytics)</td><td>14 Monate</td></tr>
+<tr><td>Absturzberichte (Crashlytics)</td><td>90 Tage</td></tr>
+<tr><td>Benachrichtigungs-Token</td><td>Bis es nicht mehr verwendet wird (Google entfernt inaktive Tokens)</td></tr>
+<tr><td>Geschenke des Supports</td><td>Höchstens 90 Tage in den veröffentlichten Dateien</td></tr>
+<tr><td>Werbeinformationen</td><td>Wie in den Richtlinien von Google beschrieben</td></tr>
+<tr><td>Informationen auf deinem Handy</td><td>Bis du das Spiel deinstallierst oder seine Daten löschst</td></tr>
+</table>
+
+<h2>6. Deine Wahlmöglichkeiten</h2>
+<ul>
+<li><b>Datenschutzoptionen im Spiel</b>: Wo das Gesetz es verlangt (Europa, Vereinigtes Königreich, Schweiz),
+gibt es in den Optionen des Spiels eine Schaltfläche „Privatsphäre“, mit der du deine Einwilligung zur Werbung
+jederzeit ändern kannst.</li>
+<li><b>Werbekennung</b>: In den Einstellungen deines Handys kannst du deine Werbe-ID zurücksetzen oder löschen und
+personalisierte Werbung deaktivieren (Android) oder Apps das Tracking nicht mehr erlauben (iPhone).</li>
+<li><b>Benachrichtigungen</b>: Schalte sie jederzeit in den Einstellungen deines Handys für das Spiel aus.</li>
+<li><b>Statistik</b>: Wenn du die Daten des Spiels löschst oder es deinstallierst, erhält das Spiel neue zufällige
+IDs, sodass alte Statistiken nicht mehr mit deinem Gerät verknüpft sind.</li>
+<li><b>Deine Rechte</b>: Je nachdem, wo du lebst (zum Beispiel nach der DSGVO), hast du möglicherweise das Recht,
+auf Informationen über dich zuzugreifen, sie löschen zu lassen oder ihrer Nutzung zu widersprechen, und dich
+bei deiner Datenschutzbehörde zu beschweren. Da das Spiel keine Konten hat, können wir meist nicht erkennen,
+welche Informationen deine sind, aber schreib uns (wenn möglich mit deiner Spieler-ID), und wir helfen, so gut
+wir können.</li>
+</ul>
+
+<h2>7. Kinder</h2>
+<p>Das Spiel ist für Spieler ab 13 Jahren gedacht und richtet sich nicht an Kinder unter 13 Jahren. Wir erfassen
+nicht wissentlich Informationen von Kindern unter 13 Jahren. Wenn du glaubst, dass ein Kind unter 13 Jahren das
+Spiel genutzt hat, und du möchtest, dass Informationen entfernt werden, kontaktiere uns.</p>
+
+<h2>8. Sicherheit und Übermittlungen</h2>
+<p>Downloads und die oben genannten Dienste nutzen verschlüsselte Verbindungen (HTTPS). Die Server der Dienste
+können sich außerhalb deines Landes befinden, auch in den Vereinigten Staaten; Google, Apple, GitHub und
+Cloudflare schützen solche Übermittlungen wie in ihren Richtlinien beschrieben.</p>
+
+<h2>9. Änderungen</h2>
+<p>Wenn sich diese Erklärung ändert, wird die neue Version mit einem neuen Datum auf dieser Seite
+veröffentlicht.</p>
+
+<h2>10. Kontakt</h2>
+<p>Team von Think More Think Less &middot; <a href="mailto:mohammed.m.saud404@gmail.com">mohammed.m.saud404@gmail.com</a></p>
+</article>
+
+<article id="tr" lang="tr" dir="ltr" hidden>
+<h1>Gizlilik Politikası</h1>
+<p class="meta">“Çok düşün, az düşün” (Think More Think Less) oyunu &middot; Think More Think Less ekibi &middot; Son güncelleme: 20 Ekim 2026</p>
+
+<p>Bu politika, “Çok düşün, az düşün” mobil oyununun (“oyun”, “biz”) Android ve iPhone'da hangi bilgileri, neden
+kullandığını ve senin hangi seçeneklere sahip olduğunu açıklar. Oyunda hesap yoktur: adını, e-posta adresini,
+telefon numaranı, kişilerini, fotoğraflarını veya tam konumunu asla istemeyiz.</p>
+
+<h2>1. Telefonunda saklanan bilgiler</h2>
+<p>İlerlemen (çözülen bölümler, yıldızlar ve en iyi süreler), ipuçların, ayarların (dil, müzik), indirdiğin
+bölümler, ekranlar, diller ve müzikler, bugün izlenen ödüllü reklamların sayısı, satın alımlarının kaydı ve rastgele
+bir oyuncu kimliği yalnızca telefonunda saklanır. Biz bunları göremeyiz. Oyunu kaldırdığında veya verilerini
+temizlediğinde silinirler.</p>
+
+<h2>2. Kullandığımız hizmetlerin topladığı bilgiler</h2>
+<p>Oyun aşağıdaki hizmetleri kullanır. Her biri, kullanıldığında cihazından bazı teknik bilgiler alır:</p>
+<ul>
+<li><b>Google Analytics for Firebase</b> (oyun istatistikleri): hangi ekranların ve bölümlerin oynandığı, bir bölümün
+ne kadar sürdüğü, bölümün kazanılıp kazanılmadığı, kullanılan ipuçları, gösterilen reklamlar, indirmeler ve
+başlatılan ve tamamlanan satın alımlar. Ayrıca rastgele bir uygulama örneği kimliği, cihaz modeli, sistem sürümü
+(Android veya iOS), oyunun sürümü, dili ve IP adresinden belirlenen yaklaşık ülke veya bölge bilgisini alır. Bunu
+bölümleri ve oyunu geliştirmek için kullanırız. Reklam için kullanılmaz: oyun, Analytics'e reklam amaçlı kullanımın
+reddedildiğini bildirir.</li>
+<li><b>Firebase Crashlytics</b> (çökme raporları): oyun çöktüğünde, çökmenin teknik ayrıntılarını içeren bir rapor
+(kodda nerede olduğu, cihaz modeli, sistem sürümü, oyunun sürümü, çökmenin olduğu ekran ve rastgele bir kurulum
+kimliği).</li>
+<li><b>Firebase Cloud Messaging</b> (bildirimler): tüm oyunculara, tek bir dildeki oyunculara veya tek bir oyuncu
+kimliğine bildirim gönderebilmemiz için rastgele bir cihaz jetonu (örneğin destek ekibinin sana bir hediye
+gönderdiğini haber vermek için). Android 13 ve sonrasında ve iPhone'da oyun önce iznini ister.</li>
+<li><b>Google AdMob</b> (reklamlar): oyun bazı bölümlerden sonra reklam gösterir, izlemeyi seçtiğinde ödüllü bir
+reklam gösterir (bir ipucu için veya bir bölümü atlamak için) ve bir bölümün altında banner gösterebilir. AdMob,
+reklam göstermek, reklamları ölçmek ve dolandırıcılığı önlemek için cihazının reklam kimliğini, IP adresini, cihaz
+bilgilerini ve reklamlarla nasıl etkileşim kurduğunu kullanabilir. iPhone'da reklam kimliği yalnızca sana
+sorulduğunda izlemeye izin verirsen kullanılır. Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'de önce Google'ın
+onay mesajıyla senden onay istenir; onay olmadan yalnızca kişiselleştirilmemiş reklamlar gösterilir. Diğer
+yerlerde, telefonunun ayarlarından kapatmadığın sürece Google ilgi alanlarına dayalı reklamlar gösterebilir (bkz.
+madde 6).</li>
+<li><b>Google Play ve App Store</b> (ipucu paketleri ve “Reklamları kaldır” satın alımları): ödemeler tamamen
+Google Play veya Apple tarafından yürütülür. Kart veya ödeme bilgilerini asla almayız; oyun mağazadan yalnızca
+satın alınan ürünü ve satın alma kaydını alır.</li>
+<li><b>GitHub ve Cloudflare</b> (indirmeler): yeni bölümler, özel görevler, ekranlar, diller, müzikler, oyunun
+kuralları ve destek ekibinin hediyeleri GitHub'ın sunucularından veya GitHub'a erişilemeyen yerlerde Cloudflare
+üzerindeki yansı sunucumuzdan indirilir. Her web sitesi gibi, bunlar da IP adresini ve temel istek bilgilerini
+alır.</li>
+<li><b>Bağlantı kontrolü</b>: yalnızca bir indirme başarısız olduğunda oyun, çevrimdışı olup olmadığını veya
+sunucunun bulunduğun yerde engellenip engellenmediğini anlamak için google.com ve cloudflare.com'a bağlanır. Onlara
+normal bir web isteği dışında hiçbir şey gönderilmez.</li>
+</ul>
+<p>Kendi politikaları: <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a>,
+<a href="https://firebase.google.com/support/privacy">Firebase'de Gizlilik ve Güvenlik</a>,
+<a href="https://policies.google.com/technologies/partner-sites?hl=tr">Google, hizmetlerini kullanan uygulamalardan gelen bilgileri nasıl kullanır</a>,
+<a href="https://www.apple.com/legal/privacy/">Apple Gizlilik Politikası</a>,
+<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Genel Gizlilik Bildirimi</a>,
+<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Gizlilik Politikası</a>.</p>
+
+<h2>3. Oyuncu kimliğin ve destek ekibinin hediyeleri</h2>
+<p>Oyun rastgele bir oyuncu kimliği oluşturur (ayarlarında gösterilir). Bu kimlik adınla veya kim olduğunla
+bağlantılı değildir. Onu bize gönderirsen destek ekibi sana ipucu veya “Reklamları kaldır” hediye edebilir: hediye,
+ait olduğu oyuncu kimliğiyle birlikte, oyunun indirdiği bir dosyada şifrelenmiş olarak en fazla 90 gün yayımlanır.</p>
+
+<h2>4. Yapmadıklarımız</h2>
+<ul>
+<li>Bilgilerini satmayız.</li>
+<li>Adını, e-posta adresini, kişilerini, fotoğraflarını, mikrofon verilerini veya tam konumunu toplamayız.</li>
+<li>Yukarıdaki bilgileri kim olduğunla ilişkilendirmeyiz.</li>
+</ul>
+
+<h2>5. Bilgiler ne kadar süre saklanır</h2>
+<table>
+<tr><th>Bilgi</th><th>Saklama süresi</th></tr>
+<tr><td>Oyun istatistikleri (Analytics)</td><td>14 ay</td></tr>
+<tr><td>Çökme raporları (Crashlytics)</td><td>90 gün</td></tr>
+<tr><td>Bildirim jetonu</td><td>Artık kullanılmayana kadar (Google etkin olmayan jetonları siler)</td></tr>
+<tr><td>Destek ekibinin hediyeleri</td><td>Yayımlanan dosyalarda en fazla 90 gün</td></tr>
+<tr><td>Reklam bilgileri</td><td>Google'ın politikalarında açıklandığı gibi</td></tr>
+<tr><td>Telefonundaki bilgiler</td><td>Oyunu kaldırana veya verilerini temizleyene kadar</td></tr>
+</table>
+
+<h2>6. Seçeneklerin</h2>
+<ul>
+<li><b>Oyundaki gizlilik tercihleri</b>: yasanın gerektirdiği yerlerde (Avrupa, Birleşik Krallık, İsviçre) oyunun
+ayarlarında, reklam onayını istediğin zaman değiştirmen için bir “Gizlilik tercihleri” düğmesi bulunur.</li>
+<li><b>Reklam kimliği</b>: telefonunun ayarlarından reklam kimliğini sıfırlayabilir veya silebilir ve
+kişiselleştirilmiş reklamları devre dışı bırakabilir (Android) ya da uygulamaların seni izlemesine izin vermeyi
+bırakabilirsin (iPhone).</li>
+<li><b>Bildirimler</b>: telefonunun ayarlarından oyunun bildirimlerini istediğin zaman kapat.</li>
+<li><b>İstatistikler</b>: oyunun verilerini temizlemek veya oyunu kaldırmak oyuna yeni rastgele kimlikler verir,
+böylece eski istatistikler artık cihazınla ilişkilendirilmez.</li>
+<li><b>Hakların</b>: yaşadığın yere bağlı olarak (örneğin GDPR kapsamında) hakkındaki bilgilere erişme, bunları
+sildirme veya kullanılmalarına itiraz etme ve veri koruma kurumuna şikâyette bulunma hakkın olabilir. Oyunda hesap
+olmadığından genellikle hangi bilginin sana ait olduğunu bilemeyiz, ama bize yaz (mümkünse oyuncu kimliğinle),
+elimizden geldiğince yardımcı oluruz.</li>
+</ul>
+
+<h2>7. Çocuklar</h2>
+<p>Oyun 13 yaş ve üzeri oyuncular içindir ve 13 yaşın altındaki çocuklara yönelik değildir. 13 yaşın altındaki
+çocuklardan bilerek bilgi toplamayız. 13 yaşın altındaki bir çocuğun oyunu kullandığını düşünüyorsan ve bilgilerin
+silinmesini istiyorsan bizimle iletişime geç.</p>
+
+<h2>8. Güvenlik ve aktarımlar</h2>
+<p>İndirmeler ve yukarıdaki hizmetler şifreli bağlantılar (HTTPS) kullanır. Hizmetlerin sunucuları, Amerika Birleşik
+Devletleri de dâhil olmak üzere ülkenin dışında olabilir; Google, Apple, GitHub ve Cloudflare bu aktarımları
+politikalarında açıklandığı şekilde korur.</p>
+
+<h2>9. Değişiklikler</h2>
+<p>Bu politika değişirse yeni sürüm bu sayfada yeni bir tarihle yayımlanır.</p>
+
+<h2>10. İletişim</h2>
+<p>Think More Think Less ekibi &middot; <a href="mailto:mohammed.m.saud404@gmail.com">mohammed.m.saud404@gmail.com</a></p>
+</article>
+
+<article id="hi" lang="hi" dir="ltr" hidden>
+<h1>प्राइवेसी पॉलिसी</h1>
+<p class="meta">गेम "ज़्यादा सोचो, कम सोचो" (Think More Think Less) &middot; Think More Think Less टीम &middot; अंतिम अपडेट: 20 अक्टूबर 2026</p>
+
+<p>यह पॉलिसी बताती है कि मोबाइल गेम "ज़्यादा सोचो, कम सोचो" ("गेम", "हम") Android और iPhone पर कौन-सी जानकारी
+इस्तेमाल करता है, क्यों करता है, और तुम्हारे पास कौन-से विकल्प हैं। गेम में कोई अकाउंट नहीं है: हम तुमसे कभी तुम्हारा नाम,
+ई-मेल पता, फ़ोन नंबर, कॉन्टैक्ट, फ़ोटो या सटीक लोकेशन नहीं माँगते।</p>
+
+<h2>1. तुम्हारे फ़ोन पर रखी जाने वाली जानकारी</h2>
+<p>तुम्हारी प्रगति (पूरे किए गए लेवल, स्टार और सबसे अच्छे समय), तुम्हारे हिंट, तुम्हारी सेटिंग्स (भाषा, संगीत), तुम्हारे
+डाउनलोड किए गए लेवल, स्क्रीन, भाषाएँ और संगीत, आज देखे गए इनाम वाले विज्ञापनों की संख्या, तुम्हारी ख़रीदारी का रिकॉर्ड
+और एक रैंडम प्लेयर ID सिर्फ़ तुम्हारे फ़ोन पर सेव होते हैं। हम इन्हें नहीं देख सकते। जब तुम गेम अनइंस्टॉल करते हो या
+उसका डेटा क्लियर करते हो, तो ये डिलीट हो जाते हैं।</p>
+
+<h2>2. हमारी इस्तेमाल की जाने वाली सेवाओं द्वारा इकट्ठा की जाने वाली जानकारी</h2>
+<p>गेम नीचे दी गई सेवाओं का इस्तेमाल करता है। इस्तेमाल होने पर हर सेवा को तुम्हारे डिवाइस से कुछ तकनीकी जानकारी
+मिलती है:</p>
+<ul>
+<li><b>Google Analytics for Firebase</b> (गेम के आँकड़े): कौन-सी स्क्रीन और लेवल खेले जाते हैं, किसी लेवल में कितना समय
+लगता है, वह जीता गया या हारा गया, इस्तेमाल किए गए हिंट, दिखाए गए विज्ञापन, डाउनलोड, और शुरू और पूरी की गई
+ख़रीदारियाँ। इसे एक रैंडम ऐप-इंस्टेंस ID, डिवाइस का मॉडल, सिस्टम का वर्ज़न (Android या iOS), गेम का वर्ज़न, उसकी भाषा
+और IP एड्रेस से निकाला गया अनुमानित देश या क्षेत्र भी मिलता है। हम इसका इस्तेमाल लेवल और गेम को बेहतर बनाने के लिए
+करते हैं। इसका इस्तेमाल विज्ञापन के लिए नहीं होता: गेम Analytics को बताता है कि विज्ञापन के लिए इस्तेमाल की अनुमति
+नहीं है।</li>
+<li><b>Firebase Crashlytics</b> (क्रैश रिपोर्ट): जब गेम क्रैश होता है, तो इसे क्रैश की तकनीकी जानकारी वाली एक रिपोर्ट मिलती है
+(कोड में क्रैश कहाँ हुआ, डिवाइस का मॉडल, सिस्टम का वर्ज़न, गेम का वर्ज़न, वह स्क्रीन जिस पर क्रैश हुआ और एक रैंडम
+इंस्टॉलेशन ID)।</li>
+<li><b>Firebase Cloud Messaging</b> (नोटिफ़िकेशन): एक रैंडम डिवाइस टोकन, ताकि हम सभी खिलाड़ियों को, किसी एक भाषा के
+खिलाड़ियों को, या किसी एक प्लेयर ID को नोटिफ़िकेशन भेज सकें (उदाहरण के लिए तुम्हें यह बताने के लिए कि सपोर्ट ने तुम्हें
+एक तोहफ़ा भेजा है)। Android 13 और उसके बाद के वर्ज़न पर और iPhone पर, गेम पहले तुम्हारी अनुमति माँगता है।</li>
+<li><b>Google AdMob</b> (विज्ञापन): गेम कुछ लेवल के बाद एक विज्ञापन दिखाता है, जब तुम ख़ुद देखना चुनते हो तब एक इनाम
+वाला विज्ञापन दिखाता है (हिंट पाने के लिए या कोई लेवल स्किप करने के लिए), और किसी लेवल के नीचे एक बैनर दिखा सकता है।
+AdMob विज्ञापन दिखाने, उन्हें मापने और धोखाधड़ी रोकने के लिए तुम्हारे डिवाइस के विज्ञापन आइडेंटिफ़ायर, IP एड्रेस, डिवाइस
+की जानकारी और विज्ञापनों के साथ तुम्हारे इंटरैक्शन का इस्तेमाल कर सकता है। iPhone पर विज्ञापन आइडेंटिफ़ायर का
+इस्तेमाल तभी होता है, जब पूछे जाने पर तुम ट्रैकिंग की अनुमति देते हो। यूरोपीय आर्थिक क्षेत्र, यूनाइटेड किंगडम और
+स्विट्ज़रलैंड में, पहले Google के सहमति संदेश के ज़रिए तुमसे तुम्हारी सहमति माँगी जाती है; सहमति के बिना सिर्फ़
+गैर-व्यक्तिगत विज्ञापन दिखाए जाते हैं। बाकी जगहों पर, Google तुम्हारी रुचियों के आधार पर विज्ञापन दिखा सकता है, जब तक
+कि तुम इसे अपने फ़ोन की सेटिंग्स में बंद न कर दो (सेक्शन 6 देखो)।</li>
+<li><b>Google Play और App Store</b> (हिंट पैक और "विज्ञापन हटाओ" की ख़रीदारी): पेमेंट पूरी तरह से Google Play या Apple
+संभालता है। हमें तुम्हारे कार्ड या पेमेंट की जानकारी कभी नहीं मिलती; गेम को स्टोर से सिर्फ़ ख़रीदा गया प्रोडक्ट और
+ख़रीदारी का रिकॉर्ड मिलता है।</li>
+<li><b>GitHub और Cloudflare</b> (डाउनलोड): नए लेवल, स्पेशल चैलेंज, स्क्रीन, भाषाएँ, संगीत, गेम के नियम और सपोर्ट के तोहफ़े
+GitHub के सर्वर से डाउनलोड होते हैं, या जहाँ GitHub तक नहीं पहुँचा जा सकता, वहाँ Cloudflare पर हमारे मिरर से। किसी भी
+वेबसाइट की तरह, इन्हें तुम्हारा IP एड्रेस और रिक्वेस्ट की बुनियादी जानकारी मिलती है।</li>
+<li><b>कनेक्शन की जाँच</b>: सिर्फ़ तब, जब कोई डाउनलोड नाकाम होता है, गेम google.com और cloudflare.com से संपर्क करता है,
+यह पता करने के लिए कि तुम ऑफ़लाइन हो या तुम्हारी जगह पर सर्वर ब्लॉक है। उन्हें एक सामान्य वेब रिक्वेस्ट के अलावा कुछ
+नहीं भेजा जाता।</li>
+</ul>
+<p>उनकी अपनी पॉलिसी: <a href="https://policies.google.com/privacy?hl=hi">Google प्राइवेसी पॉलिसी</a>,
+<a href="https://firebase.google.com/support/privacy">Firebase में प्राइवेसी और सुरक्षा</a>,
+<a href="https://policies.google.com/technologies/partner-sites?hl=hi">Google अपनी सेवाएँ इस्तेमाल करने वाले ऐप्स से मिली जानकारी का इस्तेमाल कैसे करता है</a>,
+<a href="https://www.apple.com/legal/privacy/">Apple प्राइवेसी पॉलिसी</a>,
+<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub का सामान्य प्राइवेसी स्टेटमेंट</a>,
+<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare प्राइवेसी पॉलिसी</a>।</p>
+
+<h2>3. तुम्हारी प्लेयर ID और सपोर्ट के तोहफ़े</h2>
+<p>गेम एक रैंडम प्लेयर ID बनाता है (जो उसकी सेटिंग्स में दिखती है)। यह तुम्हारे नाम से या तुम कौन हो, इससे जुड़ी नहीं है।
+अगर तुम इसे हमें भेजते हो, तो सपोर्ट तुम्हें तोहफ़े के रूप में हिंट या "विज्ञापन हटाओ" दे सकता है: तोहफ़ा, जिस प्लेयर ID के
+लिए है उसके साथ, एन्क्रिप्ट करके एक ऐसी फ़ाइल में पब्लिश किया जाता है जिसे गेम डाउनलोड करता है, ज़्यादा से ज़्यादा
+90 दिनों के लिए।</p>
+
+<h2>4. हम क्या नहीं करते</h2>
+<ul>
+<li>हम तुम्हारी जानकारी नहीं बेचते।</li>
+<li>हम तुम्हारा नाम, ई-मेल, कॉन्टैक्ट, फ़ोटो, माइक्रोफ़ोन या सटीक लोकेशन इकट्ठा नहीं करते।</li>
+<li>हम ऊपर दी गई जानकारी को इस बात से नहीं जोड़ते कि तुम कौन हो।</li>
+</ul>
+
+<h2>5. जानकारी कितने समय तक रखी जाती है</h2>
+<table>
+<tr><th>जानकारी</th><th>कितने समय तक रखी जाती है</th></tr>
+<tr><td>गेम के आँकड़े (Analytics)</td><td>14 महीने</td></tr>
+<tr><td>क्रैश रिपोर्ट (Crashlytics)</td><td>90 दिन</td></tr>
+<tr><td>नोटिफ़िकेशन टोकन</td><td>जब तक उसका इस्तेमाल बंद न हो जाए (Google निष्क्रिय टोकन हटा देता है)</td></tr>
+<tr><td>सपोर्ट के तोहफ़े</td><td>पब्लिश की गई फ़ाइलों में ज़्यादा से ज़्यादा 90 दिन</td></tr>
+<tr><td>विज्ञापनों की जानकारी</td><td>जैसा Google की पॉलिसी में बताया गया है</td></tr>
+<tr><td>तुम्हारे फ़ोन पर मौजूद जानकारी</td><td>जब तक तुम गेम अनइंस्टॉल न करो या उसका डेटा क्लियर न करो</td></tr>
+</table>
+
+<h2>6. तुम्हारे विकल्प</h2>
+<ul>
+<li><b>गेम में प्राइवेसी विकल्प</b>: जहाँ क़ानून के अनुसार ज़रूरी है (यूरोप, यूके, स्विट्ज़रलैंड), वहाँ गेम की सेटिंग्स में
+"प्राइवेसी विकल्प" बटन होता है, जिससे तुम कभी भी विज्ञापनों के लिए अपनी सहमति बदल सकते हो।</li>
+<li><b>विज्ञापन आइडेंटिफ़ायर</b>: अपने फ़ोन की सेटिंग्स में तुम अपनी विज्ञापन ID रीसेट या डिलीट कर सकते हो और व्यक्तिगत
+विज्ञापनों से ऑप्ट आउट कर सकते हो (Android), या ऐप्स को तुम्हें ट्रैक करने की अनुमति देना बंद कर सकते हो (iPhone)।</li>
+<li><b>नोटिफ़िकेशन</b>: इन्हें कभी भी अपने फ़ोन की सेटिंग्स में गेम के लिए बंद कर दो।</li>
+<li><b>आँकड़े</b>: गेम का डेटा क्लियर करने या उसे अनइंस्टॉल करने पर गेम को नई रैंडम ID मिलती हैं, इसलिए पुराने आँकड़े
+फिर तुम्हारे डिवाइस से जुड़े नहीं रहते।</li>
+<li><b>तुम्हारे अधिकार</b>: तुम कहाँ रहते हो, इसके आधार पर (उदाहरण के लिए GDPR के तहत) तुम्हें अपने बारे में जानकारी तक
+पहुँचने, उसे डिलीट करवाने या उसके इस्तेमाल पर आपत्ति करने का, और अपने डेटा संरक्षण प्राधिकरण से शिकायत करने का
+अधिकार हो सकता है। क्योंकि गेम में कोई अकाउंट नहीं है, हम आम तौर पर यह नहीं बता सकते कि कौन-सी जानकारी तुम्हारी है,
+लेकिन हमें लिखो (हो सके तो अपनी प्लेयर ID के साथ) और हम जितनी हो सके उतनी मदद करेंगे।</li>
+</ul>
+
+<h2>7. बच्चे</h2>
+<p>यह गेम 13 साल और उससे ज़्यादा उम्र के खिलाड़ियों के लिए है और 13 साल से कम उम्र के बच्चों को ध्यान में रखकर नहीं
+बनाया गया है। हम जान-बूझकर 13 साल से कम उम्र के बच्चों से जानकारी इकट्ठा नहीं करते। अगर तुम्हें लगता है कि 13 साल से
+कम उम्र के किसी बच्चे ने गेम इस्तेमाल किया है और तुम चाहते हो कि जानकारी हटाई जाए, तो हमसे संपर्क करो।</p>
+
+<h2>8. सुरक्षा और डेटा ट्रांसफ़र</h2>
+<p>डाउनलोड और ऊपर बताई गई सेवाएँ एन्क्रिप्टेड कनेक्शन (HTTPS) का इस्तेमाल करती हैं। इन सेवाओं के सर्वर तुम्हारे देश के
+बाहर हो सकते हैं, जिसमें संयुक्त राज्य अमेरिका भी शामिल है; Google, Apple, GitHub और Cloudflare ऐसे ट्रांसफ़र को अपनी
+पॉलिसी में बताए गए तरीके से सुरक्षित रखते हैं।</p>
+
+<h2>9. बदलाव</h2>
+<p>अगर यह पॉलिसी बदलती है, तो नया वर्ज़न नई तारीख़ के साथ इसी पेज पर पब्लिश किया जाता है।</p>
+
+<h2>10. संपर्क</h2>
+<p>Think More Think Less टीम &middot; <a href="mailto:mohammed.m.saud404@gmail.com">mohammed.m.saud404@gmail.com</a></p>
+</article>
+
+<article id="pt" lang="pt" dir="ltr" hidden>
+<h1>Política de Privacidade</h1>
+<p class="meta">Jogo Pense mais, pense menos (Think More Think Less) &middot; Equipe Think More Think Less &middot; Última atualização: 20 de outubro de 2026</p>
+
+<p>Esta política explica quais informações o jogo para celular Pense mais, pense menos (“o jogo”, “nós”) usa
+no Android e no iPhone, por que as usa e quais escolhas você tem. O jogo não tem contas: nunca pedimos seu
+nome, endereço de e-mail, número de telefone, contatos, fotos ou localização precisa.</p>
+
+<h2>1. Informações guardadas no seu celular</h2>
+<p>Seu progresso (níveis resolvidos, estrelas e melhores tempos), suas dicas, seus ajustes (idioma, música),
+os níveis, telas, idiomas e músicas que você baixou, o número de anúncios com recompensa assistidos hoje, um
+registro das suas compras e um ID do jogador aleatório ficam salvos apenas no seu celular. Nós não podemos
+vê-los. Eles são apagados quando você desinstala o jogo ou limpa os dados dele.</p>
+
+<h2>2. Informações coletadas pelos serviços que usamos</h2>
+<p>O jogo usa os serviços a seguir. Cada um recebe algumas informações técnicas do seu aparelho quando é
+usado:</p>
+<ul>
+<li><b>Google Analytics for Firebase</b> (estatísticas do jogo): quais telas e níveis são jogados, quanto tempo
+um nível leva, se ele foi vencido ou perdido, as dicas usadas, os anúncios exibidos, os downloads e as compras
+iniciadas e concluídas. Ele também recebe um ID aleatório da instância do app, o modelo do aparelho, a versão
+do sistema (Android ou iOS), a versão do jogo, o idioma do jogo e um país ou região aproximados, deduzidos do
+endereço IP. Nós o usamos para melhorar os níveis e o jogo. Ele não é usado para publicidade: o jogo informa
+ao Analytics que o uso para publicidade é negado.</li>
+<li><b>Firebase Crashlytics</b> (relatórios de falhas): quando o jogo trava, um relatório com os detalhes
+técnicos da falha (onde ela aconteceu no código, o modelo do aparelho, a versão do sistema, a versão do jogo,
+a tela em que ela aconteceu e um ID de instalação aleatório).</li>
+<li><b>Firebase Cloud Messaging</b> (notificações): um token aleatório do aparelho, para que possamos enviar
+notificações a todos os jogadores, aos jogadores de um idioma ou a um ID do jogador (por exemplo, para avisar
+você de que o suporte lhe enviou um presente). No Android 13 ou mais recente e no iPhone, o jogo pede sua
+permissão antes.</li>
+<li><b>Google AdMob</b> (anúncios): o jogo mostra um anúncio depois de alguns níveis, um anúncio com recompensa
+quando você escolhe assistir a um (por uma dica ou para pular um nível) e pode mostrar um banner na parte de
+baixo de um nível. O AdMob pode usar o identificador de publicidade do seu aparelho, o endereço IP,
+informações do aparelho e a forma como você interage com os anúncios para exibir anúncios, medi-los e evitar
+fraudes. No iPhone, o identificador de publicidade só é usado se você permitir o rastreamento quando isso for
+perguntado a você. No Espaço Econômico Europeu, no Reino Unido e na Suíça, seu consentimento é pedido antes,
+por meio da mensagem de consentimento do Google; sem consentimento, apenas anúncios não personalizados são
+exibidos. Em outros lugares, o Google pode mostrar anúncios com base nos seus interesses, a menos que você
+desative isso nas configurações do seu celular (veja a seção 6).</li>
+<li><b>Google Play e App Store</b> (compras de pacotes de dicas e de “Remover anúncios”): os pagamentos são
+processados inteiramente pelo Google Play ou pela Apple. Nunca recebemos os dados do seu cartão ou de
+pagamento; o jogo recebe da loja apenas o produto comprado e o registro da compra.</li>
+<li><b>GitHub e Cloudflare</b> (downloads): novos níveis, desafios especiais, telas, idiomas, músicas, as
+regras do jogo e os presentes do suporte são baixados dos servidores do GitHub ou, onde o GitHub não pode ser
+acessado, do nosso espelho na Cloudflare. Como qualquer site, eles recebem seu endereço IP e informações
+básicas da solicitação.</li>
+<li><b>Verificação de conexão</b>: somente quando um download falha, o jogo acessa google.com e cloudflare.com
+para saber se você está sem conexão ou se o servidor está bloqueado onde você está. Nada é enviado a eles além
+de uma solicitação web normal.</li>
+</ul>
+<p>As políticas desses serviços: <a href="https://policies.google.com/privacy?hl=pt-BR">Política de Privacidade do Google</a>,
+<a href="https://firebase.google.com/support/privacy">Privacidade e segurança no Firebase</a>,
+<a href="https://policies.google.com/technologies/partner-sites?hl=pt-BR">Como o Google usa informações de apps que usam os serviços do Google</a>,
+<a href="https://www.apple.com/legal/privacy/">Política de Privacidade da Apple</a>,
+<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">Declaração Geral de Privacidade do GitHub</a>,
+<a href="https://www.cloudflare.com/privacypolicy/">Política de Privacidade da Cloudflare</a>.</p>
+
+<h2>3. Seu ID do jogador e os presentes do suporte</h2>
+<p>O jogo cria um ID do jogador aleatório (mostrado nos ajustes do jogo). Ele não está ligado ao seu nome nem a
+quem você é. Se você o enviar para nós, o suporte pode lhe dar dicas ou “Remover anúncios” de presente: o
+presente é publicado, criptografado, em um arquivo que o jogo baixa, junto com o ID do jogador a que se
+destina, por no máximo 90 dias.</p>
+
+<h2>4. O que não fazemos</h2>
+<ul>
+<li>Não vendemos suas informações.</li>
+<li>Não coletamos seu nome, e-mail, contatos, fotos, microfone nem localização precisa.</li>
+<li>Não ligamos as informações acima a quem você é.</li>
+</ul>
+
+<h2>5. Por quanto tempo as informações são guardadas</h2>
+<table>
+<tr><th>Informação</th><th>Guardada por</th></tr>
+<tr><td>Estatísticas do jogo (Analytics)</td><td>14 meses</td></tr>
+<tr><td>Relatórios de falhas (Crashlytics)</td><td>90 dias</td></tr>
+<tr><td>Token de notificação</td><td>Até não ser mais usado (o Google remove tokens inativos)</td></tr>
+<tr><td>Presentes do suporte</td><td>No máximo 90 dias nos arquivos publicados</td></tr>
+<tr><td>Informações de anúncios</td><td>Conforme descrito nas políticas do Google</td></tr>
+<tr><td>Informações no seu celular</td><td>Até você desinstalar o jogo ou limpar os dados dele</td></tr>
+</table>
+
+<h2>6. Suas escolhas</h2>
+<ul>
+<li><b>Opções de privacidade no jogo</b>: onde a lei exige (Europa, Reino Unido, Suíça), os ajustes do jogo têm
+um botão “Opções de privacidade” para mudar seu consentimento para anúncios a qualquer momento.</li>
+<li><b>Identificador de publicidade</b>: nas configurações do seu celular, você pode redefinir ou excluir seu ID
+de publicidade e desativar os anúncios personalizados (Android), ou deixar de permitir que os apps rastreiem
+você (iPhone).</li>
+<li><b>Notificações</b>: desative-as a qualquer momento nas configurações do seu celular para o jogo.</li>
+<li><b>Estatísticas</b>: limpar os dados do jogo ou desinstalá-lo dá ao jogo novos IDs aleatórios, de modo que as
+estatísticas antigas deixam de estar ligadas ao seu aparelho.</li>
+<li><b>Seus direitos</b>: dependendo de onde você mora (por exemplo, sob o GDPR), você pode ter o direito de
+acessar ou excluir informações sobre você ou de se opor ao uso delas, e de reclamar à sua autoridade de
+proteção de dados. Como o jogo não tem contas, normalmente não conseguimos saber quais informações são suas,
+mas escreva para nós (com seu ID do jogador, se puder) e ajudaremos no que for possível.</li>
+</ul>
+
+<h2>7. Crianças</h2>
+<p>O jogo é destinado a jogadores com 13 anos ou mais e não é direcionado a crianças menores de 13 anos. Não
+coletamos intencionalmente informações de crianças menores de 13 anos. Se você acredita que uma criança menor
+de 13 anos usou o jogo e quer que informações sejam removidas, entre em contato conosco.</p>
+
+<h2>8. Segurança e transferências</h2>
+<p>Os downloads e os serviços acima usam conexões criptografadas (HTTPS). Os servidores dos serviços podem
+ficar fora do seu país, inclusive nos Estados Unidos; Google, Apple, GitHub e Cloudflare protegem essas
+transferências conforme descrito em suas políticas.</p>
+
+<h2>9. Alterações</h2>
+<p>Se esta política mudar, a nova versão será publicada nesta página com uma nova data.</p>
+
+<h2>10. Contato</h2>
+<p>Equipe Think More Think Less &middot; <a href="mailto:mohammed.m.saud404@gmail.com">mohammed.m.saud404@gmail.com</a></p>
+</article>
+
+<article id="ru" lang="ru" dir="ltr" hidden>
+<h1>Политика приватности</h1>
+<p class="meta">Игра «Думай больше, думай меньше» (Think More Think Less) &middot; команда Think More Think Less &middot; Последнее обновление: 20 октября 2026 г.</p>
+
+<p>Эта политика объясняет, какую информацию мобильная игра «Думай больше, думай меньше» («игра», «мы») использует
+на Android и iPhone, зачем и какой выбор есть у тебя. В игре нет учётных записей: мы никогда не спрашиваем твоё имя,
+адрес электронной почты, номер телефона, контакты, фотографии или точное местоположение.</p>
+
+<h2>1. Информация, которая хранится на твоём телефоне</h2>
+<p>Твой прогресс (пройденные уровни, звёзды и лучшее время), твои подсказки, твои настройки (язык, музыка),
+скачанные тобой уровни, экраны, языки и музыка, количество просмотренных сегодня роликов с вознаграждением, запись
+о твоих покупках и случайный ID игрока хранятся только на твоём телефоне. Мы их не видим. Они удаляются, когда ты
+удаляешь игру или очищаешь её данные.</p>
+
+<h2>2. Информация, которую собирают используемые нами сервисы</h2>
+<p>Игра использует следующие сервисы. Каждый из них при использовании получает с твоего устройства некоторую
+техническую информацию:</p>
+<ul>
+<li><b>Google Analytics for Firebase</b> (статистика игры): какие экраны открывают и в какие уровни играют, сколько
+времени занимает уровень, пройден он или проигран, использованные подсказки, показанная реклама, загрузки, а также
+начатые и завершённые покупки. Он также получает случайный идентификатор экземпляра приложения, модель устройства,
+версию системы (Android или iOS), версию игры, её язык и примерную страну или регион, определённые по IP-адресу.
+Мы используем его, чтобы улучшать уровни и игру. Он не используется для рекламы: игра сообщает Analytics, что
+использование в рекламных целях запрещено.</li>
+<li><b>Firebase Crashlytics</b> (отчёты о сбоях): когда игра аварийно завершается, отчёт с техническими подробностями
+сбоя (в каком месте кода он произошёл, модель устройства, версия системы, версия игры, экран, на котором он
+произошёл, и случайный идентификатор установки).</li>
+<li><b>Firebase Cloud Messaging</b> (уведомления): случайный токен устройства, чтобы мы могли отправлять уведомления
+всем игрокам, игрокам на одном языке или на один ID игрока (например, чтобы сообщить тебе, что служба поддержки
+прислала тебе подарок). На Android 13 и новее и на iPhone игра сначала спрашивает твоё разрешение.</li>
+<li><b>Google AdMob</b> (реклама): игра показывает рекламу после некоторых уровней, ролик с вознаграждением, когда ты
+решаешь его посмотреть (ради подсказки или чтобы пропустить уровень), и может показывать баннер внизу уровня. AdMob
+может использовать рекламный идентификатор твоего устройства, IP-адрес, сведения об устройстве и то, как ты
+взаимодействуешь с рекламой, чтобы показывать рекламу, оценивать её и предотвращать мошенничество. На iPhone
+рекламный идентификатор используется, только если ты разрешишь отслеживание, когда тебя об этом спросят. В
+Европейской экономической зоне, Великобритании и Швейцарии у тебя сначала спрашивают согласие в сообщении Google о
+согласии; без согласия показывается только неперсонализированная реклама. В других местах Google может показывать
+рекламу с учётом твоих интересов, если ты не отключишь это в настройках телефона (см. раздел 6).</li>
+<li><b>Google Play и App Store</b> (покупки наборов подсказок и «Убрать рекламу»): платежи полностью обрабатывают
+Google Play или Apple. Мы никогда не получаем данные твоей карты или платёжные данные; игра получает от магазина
+только купленный товар и запись о покупке.</li>
+<li><b>GitHub и Cloudflare</b> (загрузки): новые уровни, особые испытания, экраны, языки, музыка, правила игры и
+подарки от службы поддержки загружаются с серверов GitHub или с нашего зеркала на Cloudflare там, где GitHub
+недоступен. Как и любой сайт, они получают твой IP-адрес и основные сведения о запросе.</li>
+<li><b>Проверка соединения</b>: только если загрузка не удалась, игра обращается к google.com и cloudflare.com, чтобы
+понять, нет ли у тебя подключения к интернету или сервер заблокирован там, где ты находишься. Им ничего не
+отправляется, кроме обычного веб-запроса.</li>
+</ul>
+<p>Их собственные политики: <a href="https://policies.google.com/privacy?hl=ru">Политика конфиденциальности Google</a>,
+<a href="https://firebase.google.com/support/privacy">Конфиденциальность и безопасность в Firebase</a>,
+<a href="https://policies.google.com/technologies/partner-sites?hl=ru">Как Google использует информацию из приложений, которые пользуются его сервисами</a>,
+<a href="https://www.apple.com/legal/privacy/">Политика конфиденциальности Apple</a>,
+<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">Общее заявление GitHub о конфиденциальности</a>,
+<a href="https://www.cloudflare.com/privacypolicy/">Политика конфиденциальности Cloudflare</a>.</p>
+
+<h2>3. Твой ID игрока и подарки от службы поддержки</h2>
+<p>Игра создаёт случайный ID игрока (он показан в её настройках). Он не связан с твоим именем или с тем, кто ты.
+Если ты пришлёшь его нам, служба поддержки может подарить тебе подсказки или «Убрать рекламу»: подарок публикуется
+в зашифрованном виде в файле, который скачивает игра, вместе с ID игрока, для которого он предназначен, не более
+чем на 90 дней.</p>
+
+<h2>4. Чего мы не делаем</h2>
+<ul>
+<li>Мы не продаём твою информацию.</li>
+<li>Мы не собираем твоё имя, адрес электронной почты, контакты, фотографии, данные микрофона или точное местоположение.</li>
+<li>Мы не связываем указанную выше информацию с тем, кто ты.</li>
+</ul>
+
+<h2>5. Сколько хранится информация</h2>
+<table>
+<tr><th>Информация</th><th>Срок хранения</th></tr>
+<tr><td>Статистика игры (Analytics)</td><td>14 месяцев</td></tr>
+<tr><td>Отчёты о сбоях (Crashlytics)</td><td>90 дней</td></tr>
+<tr><td>Токен уведомлений</td><td>Пока он не перестанет использоваться (Google удаляет неактивные токены)</td></tr>
+<tr><td>Подарки от службы поддержки</td><td>Не более 90 дней в опубликованных файлах</td></tr>
+<tr><td>Информация о рекламе</td><td>Как описано в политиках Google</td></tr>
+<tr><td>Информация на твоём телефоне</td><td>Пока ты не удалишь игру или не очистишь её данные</td></tr>
+</table>
+
+<h2>6. Твой выбор</h2>
+<ul>
+<li><b>Настройки приватности в игре</b>: там, где этого требует закон (Европа, Великобритания, Швейцария), в
+настройках игры есть кнопка «Настройки приватности», чтобы в любой момент изменить твоё согласие на рекламу.</li>
+<li><b>Рекламный идентификатор</b>: в настройках телефона ты можешь сбросить или удалить свой рекламный
+идентификатор и отказаться от персонализированной рекламы (Android) или запретить приложениям отслеживать тебя
+(iPhone).</li>
+<li><b>Уведомления</b>: отключи их в любой момент в настройках телефона для игры.</li>
+<li><b>Статистика</b>: очистка данных игры или её удаление даёт игре новые случайные идентификаторы, поэтому старая
+статистика больше не связана с твоим устройством.</li>
+<li><b>Твои права</b>: в зависимости от того, где ты живёшь (например, по GDPR), у тебя может быть право на доступ
+к информации о тебе, на её удаление или на возражение против её использования, а также право пожаловаться в свой
+орган по защите данных. Поскольку в игре нет учётных записей, мы обычно не можем определить, какая информация
+твоя, но напиши нам (по возможности укажи свой ID игрока), и мы поможем, насколько сможем.</li>
+</ul>
+
+<h2>7. Дети</h2>
+<p>Игра предназначена для игроков в возрасте от 13 лет и не ориентирована на детей младше 13 лет. Мы сознательно не
+собираем информацию от детей младше 13 лет. Если ты считаешь, что игрой пользовался ребёнок младше 13 лет, и хочешь,
+чтобы информация была удалена, свяжись с нами.</p>
+
+<h2>8. Безопасность и передача данных</h2>
+<p>Загрузки и перечисленные выше сервисы используют зашифрованные соединения (HTTPS). Серверы сервисов могут
+находиться за пределами твоей страны, в том числе в США; Google, Apple, GitHub и Cloudflare защищают такую передачу
+данных так, как описано в их политиках.</p>
+
+<h2>9. Изменения</h2>
+<p>Если эта политика изменится, новая версия будет опубликована на этой странице с новой датой.</p>
+
+<h2>10. Контакты</h2>
+<p>Команда Think More Think Less &middot; <a href="mailto:mohammed.m.saud404@gmail.com">mohammed.m.saud404@gmail.com</a></p>
+</article>
+
+<article id="es" lang="es" dir="ltr" hidden>
+<h1>Política de privacidad</h1>
+<p class="meta">Piensa más, piensa menos (Think More Think Less, el juego) &middot; El equipo de Think More Think Less &middot; Última actualización: 20 de octubre de 2026</p>
+
+<p>Esta política explica qué información usa el juego móvil Piensa más, piensa menos ("el juego", "nosotros") en
+Android y iPhone, por qué, y qué opciones tienes. El juego no tiene cuentas: nunca te pedimos tu nombre, tu dirección
+de correo electrónico, tu número de teléfono, tus contactos, tus fotos ni tu ubicación precisa.</p>
+
+<h2>1. Información guardada en tu teléfono</h2>
+<p>Tu progreso (niveles resueltos, estrellas y mejores tiempos), tus pistas, tus ajustes (idioma, música), los
+niveles, pantallas, idiomas y música que descargaste, la cantidad de anuncios con recompensa vistos hoy, un registro
+de tus compras y un ID de jugador aleatorio se guardan solo en tu teléfono. No podemos verlos. Se eliminan cuando
+desinstalas el juego o borras sus datos.</p>
+
+<h2>2. Información recopilada por los servicios que usamos</h2>
+<p>El juego usa los siguientes servicios. Cada uno recibe cierta información técnica de tu dispositivo cuando se
+usa:</p>
+<ul>
+<li><b>Google Analytics for Firebase</b> (estadísticas del juego): qué pantallas y niveles se juegan, cuánto tiempo
+toma un nivel, si se ganó o se perdió, las pistas usadas, los anuncios mostrados, las descargas, y las compras
+iniciadas y completadas. También recibe un ID de instancia de la app aleatorio, el modelo del dispositivo, la versión
+del sistema (Android o iOS), la versión del juego, su idioma y un país o región aproximados, deducidos de la dirección
+IP. Lo usamos para mejorar los niveles y el juego. No se usa con fines publicitarios: el juego le indica a Analytics
+que el uso publicitario está denegado.</li>
+<li><b>Firebase Crashlytics</b> (informes de fallos): cuando el juego falla, un informe con los detalles técnicos del
+fallo (en qué parte del código ocurrió, el modelo del dispositivo, la versión del sistema, la versión del juego, la
+pantalla en la que ocurrió y un ID de instalación aleatorio).</li>
+<li><b>Firebase Cloud Messaging</b> (notificaciones): un token de dispositivo aleatorio, para que podamos enviar
+notificaciones a todos los jugadores, a los jugadores de un idioma o a un solo ID de jugador (por ejemplo, para
+avisarte que soporte te envió un regalo). En Android 13 y versiones posteriores, y en iPhone, el juego primero te
+pide permiso.</li>
+<li><b>Google AdMob</b> (anuncios): el juego muestra un anuncio después de algunos niveles, un anuncio con recompensa
+cuando eliges ver uno (para una pista o para saltar un nivel), y puede mostrar un banner en la parte inferior de un
+nivel. AdMob puede usar el identificador de publicidad de tu dispositivo, tu dirección IP, información del
+dispositivo y cómo interactúas con los anuncios, para mostrar anuncios, medirlos y prevenir el fraude. En iPhone, el
+identificador de publicidad solo se usa si permites el rastreo cuando se te pregunta. En el Espacio Económico
+Europeo, el Reino Unido y Suiza, primero se te pide tu consentimiento mediante el mensaje de consentimiento de
+Google; sin consentimiento, solo se muestran anuncios no personalizados. En otros lugares, Google puede mostrar
+anuncios basados en tus intereses, a menos que desactives esta opción en la configuración de tu teléfono (consulta
+la sección 6).</li>
+<li><b>Google Play y el App Store</b> (compras de paquetes de pistas y de "Quitar anuncios"): los pagos los gestionan
+por completo Google Play o Apple. Nunca recibimos los datos de tu tarjeta ni tus datos de pago; el juego solo recibe
+de la tienda el producto comprado y el registro de la compra.</li>
+<li><b>GitHub y Cloudflare</b> (descargas): los niveles nuevos, los desafíos especiales, las pantallas, los idiomas,
+la música, las reglas del juego y los regalos de soporte se descargan de los servidores de GitHub, o de nuestro
+servidor espejo en Cloudflare donde no se puede acceder a GitHub. Como cualquier sitio web, reciben tu dirección IP e
+información básica de la solicitud.</li>
+<li><b>Comprobación de conexión</b>: solo cuando una descarga falla, el juego se conecta con google.com y
+cloudflare.com para saber si estás sin conexión o si el servidor está bloqueado donde te encuentras. No se les envía
+nada más que una solicitud web normal.</li>
+</ul>
+<p>Sus propias políticas: <a href="https://policies.google.com/privacy?hl=es">Política de Privacidad de Google</a>,
+<a href="https://firebase.google.com/support/privacy">Privacidad y seguridad en Firebase</a>,
+<a href="https://policies.google.com/technologies/partner-sites?hl=es">Cómo usa Google la información de las apps que usan sus servicios</a>,
+<a href="https://www.apple.com/legal/privacy/">Política de privacidad de Apple</a>,
+<a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">Declaración general de privacidad de GitHub</a>,
+<a href="https://www.cloudflare.com/privacypolicy/">Política de privacidad de Cloudflare</a>.</p>
+
+<h2>3. Tu ID de jugador y los regalos de soporte</h2>
+<p>El juego crea un ID de jugador aleatorio (que se muestra en sus ajustes). No está vinculado a tu nombre ni a tu
+identidad. Si nos lo envías, soporte puede darte pistas o "Quitar anuncios" como regalo: el regalo se publica,
+cifrado, en un archivo que el juego descarga, junto con el ID de jugador al que va destinado, durante un máximo de 90
+días.</p>
+
+<h2>4. Lo que no hacemos</h2>
+<ul>
+<li>No vendemos tu información.</li>
+<li>No recopilamos tu nombre, tu correo electrónico, tus contactos, tus fotos, tu micrófono ni tu ubicación precisa.</li>
+<li>No vinculamos la información anterior con tu identidad.</li>
+</ul>
+
+<h2>5. Cuánto tiempo se conserva la información</h2>
+<table>
+<tr><th>Información</th><th>Se conserva durante</th></tr>
+<tr><td>Estadísticas del juego (Analytics)</td><td>14 meses</td></tr>
+<tr><td>Informes de fallos (Crashlytics)</td><td>90 días</td></tr>
+<tr><td>Token de notificaciones</td><td>Hasta que deja de usarse (Google elimina los tokens inactivos)</td></tr>
+<tr><td>Regalos de soporte</td><td>Como máximo 90 días en los archivos publicados</td></tr>
+<tr><td>Información de anuncios</td><td>Según se describe en las políticas de Google</td></tr>
+<tr><td>Información en tu teléfono</td><td>Hasta que desinstales el juego o borres sus datos</td></tr>
+</table>
+
+<h2>6. Tus opciones</h2>
+<ul>
+<li><b>Opciones de privacidad en el juego</b>: donde la ley lo exige (Europa, el Reino Unido, Suiza), los ajustes
+del juego tienen un botón "Opciones de privacidad" para cambiar en cualquier momento tu consentimiento sobre los
+anuncios.</li>
+<li><b>Identificador de publicidad</b>: en la configuración de tu teléfono puedes restablecer o borrar tu ID de
+publicidad y desactivar los anuncios personalizados (Android), o dejar de permitir que las apps te rastreen
+(iPhone).</li>
+<li><b>Notificaciones</b>: desactiva las notificaciones del juego en cualquier momento en la configuración de tu
+teléfono.</li>
+<li><b>Estadísticas</b>: borrar los datos del juego o desinstalarlo le da al juego nuevos ID aleatorios, así que las
+estadísticas anteriores ya no quedan vinculadas a tu dispositivo.</li>
+<li><b>Tus derechos</b>: según dónde vivas (por ejemplo, en virtud del RGPD), puedes tener derecho a acceder a la
+información sobre ti, a eliminarla o a oponerte a su uso, y a presentar una reclamación ante tu autoridad de
+protección de datos. Como el juego no tiene cuentas, normalmente no podemos saber qué información es tuya, pero
+escríbenos (con tu ID de jugador, si puedes) y te ayudaremos en la medida de lo posible.</li>
+</ul>
+
+<h2>7. Niños</h2>
+<p>El juego está pensado para jugadores de 13 años o más y no está dirigido a niños menores de 13 años. No
+recopilamos a sabiendas información de niños menores de 13 años. Si crees que un niño menor de 13 años usó el juego y
+quieres que se elimine información, contáctanos.</p>
+
+<h2>8. Seguridad y transferencias</h2>
+<p>Las descargas y los servicios anteriores usan conexiones cifradas (HTTPS). Los servidores de los servicios pueden
+estar fuera de tu país, incluidos los Estados Unidos; Google, Apple, GitHub y Cloudflare protegen esas transferencias
+según se describe en sus políticas.</p>
+
+<h2>9. Cambios</h2>
+<p>Si esta política cambia, la nueva versión se publica en esta página con una nueva fecha.</p>
+
+<h2>10. Contacto</h2>
+<p>El equipo de Think More Think Less &middot; <a href="mailto:mohammed.m.saud404@gmail.com">mohammed.m.saud404@gmail.com</a></p>
 </article>
 </main>
 <script>
-// One language at a time: #ar (or a phone in Arabic) shows the Arabic text, otherwise English.
+// One language at a time: #fr (the game opens the page with its language) shows the French text;
+// no code, or one the page lacks: English (the default).
+var LANGS = ["en", "ar", "fr", "zh", "de", "tr", "hi", "pt", "ru", "es"];
 function show() {
-  var ar = location.hash === "#ar" || (location.hash !== "#en" && (navigator.language || "").indexOf("ar") === 0);
-  document.getElementById("en").hidden = ar;
-  document.getElementById("ar").hidden = !ar;
-  document.getElementById("to-en").className = ar ? "" : "on";
-  document.getElementById("to-ar").className = ar ? "on" : "";
-  document.documentElement.lang = ar ? "ar" : "en";
-  document.title = ar ? "سياسة الخصوصية - فكّر أكثر فكّر أقل" : "Privacy Policy - Think More Think Less";
+  var code = location.hash.slice(1);
+  if (LANGS.indexOf(code) < 0) code = "en";
+  for (var i = 0; i < LANGS.length; i++) {
+    document.getElementById(LANGS[i]).hidden = LANGS[i] !== code;
+    document.getElementById("to-" + LANGS[i]).className = LANGS[i] === code ? "on" : "";
+  }
+  document.documentElement.lang = code;
+  document.documentElement.dir = code === "ar" ? "rtl" : "ltr";
+  document.title = document.querySelector("#" + code + " h1").textContent + " - Think More Think Less";
 }
 window.addEventListener("hashchange", show);
 show();
